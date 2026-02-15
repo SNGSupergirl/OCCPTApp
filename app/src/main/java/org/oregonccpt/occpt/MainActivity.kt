@@ -25,12 +25,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
         setSupportActionBar(binding.appBarMain.toolbar)
 
-        binding.appBarMain.fab?.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                .setAction("Action", null)
-                .setAnchorView(R.id.fab).show()
-        }
-
         val navHostFragment =
             (supportFragmentManager.findFragmentById(R.id.nav_host_fragment_content_main) as NavHostFragment?)!!
         val navController = navHostFragment.navController
@@ -38,7 +32,7 @@ class MainActivity : AppCompatActivity() {
         binding.navView?.let {
             appBarConfiguration = AppBarConfiguration(
                 setOf(
-                    R.id.nav_transform, R.id.nav_reflow, R.id.nav_slideshow, R.id.nav_settings
+                    R.id.nav_home, R.id.nav_about, R.id.nav_grants, R.id.nav_education, R.id.nav_contact
                 ),
                 binding.drawerLayout
             )
@@ -49,7 +43,7 @@ class MainActivity : AppCompatActivity() {
         binding.appBarMain.contentMain.bottomNavView?.let {
             appBarConfiguration = AppBarConfiguration(
                 setOf(
-                    R.id.nav_transform, R.id.nav_reflow, R.id.nav_slideshow
+                    R.id.nav_home, R.id.nav_about, R.id.nav_grants, R.id.nav_education, R.id.nav_contact
                 )
             )
             setupActionBarWithNavController(navController, appBarConfiguration)

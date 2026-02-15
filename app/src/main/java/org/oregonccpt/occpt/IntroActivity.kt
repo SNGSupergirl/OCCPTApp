@@ -17,7 +17,7 @@ class IntroActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         val videoView = binding.videoView
-        val videoUri = "android.resource://$packageName/${R.raw.intro_video}".toUri()
+        val videoUri = "android.resource://$packageName/${R.raw.occpt_intro_1}".toUri()
         videoView.setVideoURI(videoUri)
 
         videoView.setOnCompletionListener {
