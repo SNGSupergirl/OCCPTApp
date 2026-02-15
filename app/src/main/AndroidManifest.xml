@@ -13,18 +13,22 @@
         android:theme="@style/Theme.OCCPT"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
+            android:name=".IntroActivity"
             android:exported="true"
-            android:label="@string/app_name"
-            android:resizeableActivity="true"
-            android:theme="@style/Theme.OCCPT.NoActionBar"
-            tools:targetApi="24">
+            android:theme="@style/Theme.OCCPT.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".MainActivity"
+            android:exported="false"
+            android:label="@string/app_name"
+            android:resizeableActivity="true"
+            android:theme="@style/Theme.OCCPT.NoActionBar"
+            tools:targetApi="24" />
     </application>
 
 </manifest>

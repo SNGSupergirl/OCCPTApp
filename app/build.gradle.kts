@@ -5,11 +5,11 @@ plugins {
 
 android {
     namespace = "org.oregonccpt.occpt"
-    compileSdk = 35
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "org.oregonccpt.occpt"
-        minSdk = 35
+        minSdk = 36
         targetSdk = 35
         versionCode = 1
         versionName = "1.0"
