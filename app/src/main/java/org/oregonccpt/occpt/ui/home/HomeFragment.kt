@@ -21,17 +21,17 @@ class HomeFragment : Fragment() {
     ): View {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
 
-        binding.findChildCareButton.setOnClickListener {
+        binding.parentCard.setOnClickListener {
             val url = "https://findunionchildcareor.org/find-child-care"
             startActivity(Intent(Intent.ACTION_VIEW, url.toUri()))
         }
 
-        binding.memberResourcesButton.setOnClickListener {
+        binding.providerCard.setOnClickListener {
             val url = "https://findunionchildcareor.org/resources"
             startActivity(Intent(Intent.ACTION_VIEW, url.toUri()))
         }
 
-        binding.becomeUnionProviderButton.setOnClickListener {
+        binding.joinCard.setOnClickListener {
             val url = "https://findunionchildcareor.org/join-us"
             startActivity(Intent(Intent.ACTION_VIEW, url.toUri()))
         }
