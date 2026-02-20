@@ -47,6 +47,7 @@
             android:layout_marginBottom="8dp"/>
 
         <TextView
+            android:id="@+id/members_get_body"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/join_afscme_members_get_body"

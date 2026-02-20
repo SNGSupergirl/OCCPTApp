@@ -2,11 +2,14 @@ package org.oregonccpt.occpt.ui.joinafscme
 
 import android.content.Intent
 import android.os.Bundle
+import android.text.method.LinkMovementMethod
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.net.toUri
+import androidx.core.text.HtmlCompat
 import androidx.fragment.app.Fragment
+import org.oregonccpt.occpt.R
 import org.oregonccpt.occpt.databinding.FragmentJoinAfscmeBinding
 
 class JoinAFSCMEFragment : Fragment() {
@@ -36,6 +39,10 @@ class JoinAFSCMEFragment : Fragment() {
             val url = "https://findunionchildcareor.org/privacy-policy"
             startActivity(Intent(Intent.ACTION_VIEW, url.toUri()))
         }
+
+        val membersGetBodyText = getString(R.string.join_afscme_members_get_body)
+        binding.membersGetBody.text = HtmlCompat.fromHtml(membersGetBodyText, HtmlCompat.FROM_HTML_MODE_LEGACY)
+        binding.membersGetBody.movementMethod = LinkMovementMethod.getInstance()
     }
 
     override fun onDestroyView() {
