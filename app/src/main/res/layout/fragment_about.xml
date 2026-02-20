@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -11,24 +12,36 @@
         android:orientation="vertical"
         android:padding="16dp">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Our Union"
-            android:textSize="24sp"
-            android:textStyle="bold" />
-
-        <TextView
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="Check this information to learn about currrent AFSCME Local 132" />
+            android:layout_height="200dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/about_us_header" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/who_we_are"
+                android:textColor="@android:color/white"
+                android:textSize="34sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="CCPT Evidence for Delegates"
+            android:text="@string/about_us_title"
+            android:textColor="@color/green_500"
             android:textSize="20sp"
             android:textStyle="bold" />
 
@@ -36,203 +49,128 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="Please see the attached pdfs of evidence supporting our claims against the incumbents running for President, Executive Director, and more. It's time for a change and to take Oregon AFSCME in a new direction and that is why we are supporting Sarah Curtis for President and Rob Martineau for Executive Director as well as Joe M. for 1st VP." />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="Download:"/>
-        <TextView
-            android:id="@+id/link1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:autoLink="web"
-            android:text="https://www.oregonccpt.org/docs/2024%20September%20to%20AFSCME%20Charges%20against%20Council%2075%20and%20individuals.pdf"/>
-        <TextView
-            android:id="@+id/link2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:autoLink="web"
-            android:text="https://www.oregonccpt.org/docs/2024%20Charges%20to%20Council%20Secretary%20Sheahan%20and%20Local%20132%20Exhibit%201.pdf"/>
-        <TextView
-            android:id="@+id/link3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:autoLink="web"
-            android:text="https://www.oregonccpt.org/docs/2024%20Charges%20to%20Council%20Secretary%20Sheahan%20and%20Local%20132%20Exhibits%202-21.pdf"/>
-        <TextView
-            android:id="@+id/link4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:autoLink="web"
-            android:text="https://www.oregonccpt.org/docs/Screenshot_20250502_205015_Gmail.jpg"/>
+            android:text="@string/about_us_text" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="November 2023 Union's Public Testimony on Rule Revisions (4 RACs) and to ELC"
+            android:text="@string/what_our_members_say_title"
+            android:textColor="@color/green_500"
             android:textSize="20sp"
             android:textStyle="bold" />
 
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="Please see the attached document below (downloadable in pdf format). These were approved by the Local Executive Board. While the Local Executive Board is supportive of some of the rule language, we condemn some of the proposed rules and are strongly against those rules passing." />
+            android:orientation="horizontal">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="Download:
- 2023 November 29 414 RAC public testimony CCPT Local 132 Official.pdf" />
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/member_1_icon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/member_1_quote" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/member_1_name" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/member_2_image" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/member_2_quote" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/member_2_name" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/anita_james_image" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/member_3_quote" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/member_3_name" />
+            </LinearLayout>
+        </LinearLayout>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
             android:layout_marginTop="16dp"
-            android:text="CCPT: On Youtube -- Remembering Our Beginning"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+            android:text="@string/privacy_policy"
+            android:textColor="@color/purple_500" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:autoLink="web"
-            android:text="https://www.youtube." />
-
-        <TextView
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="Bargaining Survey"
-            android:textSize="20sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
             android:layout_marginTop="8dp"
-            android:text="Hello Members, The Bargaining Team has been heavy in negotiations with CCD and DHS in regards to issues that you have brought to their attention through surveys, phone calls, conversations with the reps. etc. We are asking for more input. Please go to the survey on the following link, the deadline for the survey is July 7th at 5:00 pm." />
+            android:orientation="horizontal">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="May 9th Child Care at the Capital"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/facebook_icon" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="It's not too late to sign up to bring your children to the capital on Monday May 9th. Legislators will be reading to children that day. Please contact Eva if you and your child care children would like to come down for a field trip.
-
-This is a great opportunity for legislators to put a face to the topic of children in child care and child care providers. Please contact AFSCME Council 75, child care Political Coordinator Eva Rippeteau 503-901-1431 or eva@oregonafscme.com" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="International Convention"
-            android:textSize="20sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="Your Elected Delegates Report for 2010 International Convention in Boston There were four of us elected to attend the International Convention this year as AFSCME, Local 132 delegates. All four of us took this honor seriously and attended all sessions. The AFSCME International Convention held in Boston was an exciting and sometimes heartfelt experience." />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="Renewing Your CBR: Timeline and What to Expect"
-            android:textSize="20sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="Wondering about the new Caregiver Background Check renewal process? Wanting more info on the fingerprint process? Check out the attached document for more info. Please be aware that this is the 'optimal' or 'expected' timeline. Glitches happen and ELD is still working out the bugs/kinks in the system." />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="Download:
- Spanish CBR Process and Timeline (CBR-619sp).pdf
- CBR Process and Timeline (CBR-619).pdf" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="Download THESE Forms to Get Reimbursed for CPR and First Aid Courses"
-            android:textSize="20sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="Use these forms (must use both together) to get reimbursed for CPR and First Aid class regardless of WHO you received the training from. Simply print off both forms, complete them, enclose your training certificate and original paid receipt for the class and send to WOU using the address on the upper-right corner of the form titled 'INVOICE." />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="Download:
- Substitute_W9_revised_7_30_13.pdf
- Invoice_FirstAidCPR.pdf" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="Action: Petition for Repeal of Building Code 2021 Rule Change"
-            android:textSize="20sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="Simply print off one of these forms, fill in the info (or for you tech-savy folks complete it electronically) and then email to the addresses on the bottom of the form (or fax or mail). Building Codes must respond within 90 days. Wouldn't it have been easier to make us part of the process in the first place?? Email: bcd.info@oregon.gov &amp; Anthony.j.rocco@oregon." />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="Download:
- 2021 ORSC R101.2.1 filed request under Ch 183.390 to DBC.docx
- 2021 ORSC R101.2.1 filed request under Ch 183.390 to DBC.pdf" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="Morrow and Umatilla Emailed Letter from DELC Licensing Specialists on Well Water Contamination"
-            android:textSize="20sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="." />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="Download:
- Umatilla Morrow County Well Water Email.docx" />
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="8dp"
+                android:src="@drawable/twitter_icon" />
+        </LinearLayout>
     </LinearLayout>
 </ScrollView>
