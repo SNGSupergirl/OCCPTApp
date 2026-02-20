@@ -3,7 +3,6 @@ package org.oregonccpt.occpt
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.navigation.NavigationView
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
@@ -32,7 +31,7 @@ class MainActivity : AppCompatActivity() {
         binding.navView?.let {
             appBarConfiguration = AppBarConfiguration(
                 setOf(
-                    R.id.nav_home, R.id.nav_about, R.id.nav_grants, R.id.nav_education, R.id.nav_contact
+                    R.id.nav_home, R.id.nav_about, R.id.nav_find_child_care, R.id.nav_join_afscme, R.id.nav_contact
                 ),
                 binding.drawerLayout
             )
@@ -43,7 +42,7 @@ class MainActivity : AppCompatActivity() {
         binding.appBarMain.contentMain.bottomNavView?.let {
             appBarConfiguration = AppBarConfiguration(
                 setOf(
-                    R.id.nav_home, R.id.nav_about, R.id.nav_grants, R.id.nav_education, R.id.nav_contact
+                    R.id.nav_home, R.id.nav_about, R.id.nav_find_child_care, R.id.nav_join_afscme, R.id.nav_contact
                 )
             )
             setupActionBarWithNavController(navController, appBarConfiguration)

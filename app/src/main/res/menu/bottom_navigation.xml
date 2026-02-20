@@ -9,17 +9,17 @@
             android:icon="@drawable/ic_home_black_24dp"
             android:title="@string/menu_home" />
         <item
-            android:id="@+id/nav_about"
-            android:icon="@drawable/ic_info_black_24dp"
-            android:title="@string/menu_about" />
+            android:id="@+id/nav_find_child_care"
+            android:icon="@drawable/ic_parent"
+            android:title="@string/menu_find_child_care" />
         <item
-            android:id="@+id/nav_grants"
-            android:icon="@drawable/ic_work_black_24dp"
-            android:title="@string/menu_grants" />
+            android:id="@+id/nav_resources"
+            android:icon="@drawable/ic_provider"
+            android:title="@string/menu_resources" />
         <item
-            android:id="@+id/nav_education"
-            android:icon="@drawable/ic_school_black_24dp"
-            android:title="@string/menu_education" />
+            android:id="@+id/nav_join_afscme"
+            android:icon="@drawable/ic_join"
+            android:title="@string/menu_join_afscme" />
         <item
             android:id="@+id/nav_contact"
             android:icon="@drawable/ic_email_black_24dp"

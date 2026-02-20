@@ -1,15 +1,15 @@
-package org.oregonccpt.occpt.ui.education
+package org.oregonccpt.occpt.ui.joinafscme
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import org.oregonccpt.occpt.databinding.FragmentEducationBinding
+import org.oregonccpt.occpt.databinding.FragmentJoinAfscmeBinding
 
-class EducationFragment : Fragment() {
+class JoinAFSCMEFragment : Fragment() {
 
-    private var _binding: FragmentEducationBinding? = null
+    private var _binding: FragmentJoinAfscmeBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -17,7 +17,7 @@ class EducationFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentEducationBinding.inflate(inflater, container, false)
+        _binding = FragmentJoinAfscmeBinding.inflate(inflater, container, false)
         return binding.root
     }
 

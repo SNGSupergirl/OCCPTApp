@@ -18,16 +18,22 @@
         tools:layout="@layout/fragment_about" />
 
     <fragment
-        android:id="@+id/nav_grants"
+        android:id="@+id/nav_find_child_care"
+        android:name="org.oregonccpt.occpt.ui.findchildcare.FindChildCareFragment"
+        android:label="@string/menu_find_child_care"
+        tools:layout="@layout/fragment_find_child_care" />
+
+    <fragment
+        android:id="@+id/nav_find_child_care"
         android:name="org.oregonccpt.occpt.ui.grants.GrantsFragment"
         android:label="@string/menu_grants"
         tools:layout="@layout/fragment_grants" />
 
     <fragment
-        android:id="@+id/nav_education"
-        android:name="org.oregonccpt.occpt.ui.education.EducationFragment"
+        android:id="@+id/nav_join_afscme"
+        android:name="org.oregonccpt.occpt.ui.joinafscme.JoinAFSCMEFragment"
         android:label="@string/menu_education"
-        tools:layout="@layout/fragment_education" />
+        tools:layout="@layout/fragment_join_afscme" />
 
     <fragment
         android:id="@+id/nav_contact"
