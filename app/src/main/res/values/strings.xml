@@ -26,4 +26,6 @@
     <string name="menu_grants">Grants</string>
     <string name="menu_education">Education</string>
     <string name="menu_contact">Contact</string>
+    <string name="open_local_pdf">Open Local PDF</string>
+    <string name="logo_description">App Logo</string>
 </resources>

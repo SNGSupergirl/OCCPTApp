@@ -5,10 +5,8 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
 import androidx.core.net.toUri
 import androidx.fragment.app.Fragment
-import org.oregonccpt.occpt.R
 import org.oregonccpt.occpt.databinding.FragmentHomeBinding
 
 class HomeFragment : Fragment() {
@@ -23,32 +21,38 @@ class HomeFragment : Fragment() {
     ): View {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
 
-        val images = listOf(
-            R.drawable.home_2019_class,
-            R.drawable.home_2019_retreat,
-            R.drawable.home_training_2020,
-            R.drawable.home_2018_retreat_class,
-            R.drawable.home_2018_bargaining_team,
-            R.drawable.home_2020_protest_james_hunter,
-            R.drawable.home_board_with_e_mcbride_2019,
-            R.drawable.home_2019_december_mtg_training,
-            R.drawable.home_2020_april_capitol_protest,
-            R.drawable.home_2020_april_saturday_kates_house
-        )
-
-        for (imageResId in images) {
-            val imageView = ImageView(requireContext()).apply {
-                scaleType = ImageView.ScaleType.CENTER_CROP
-                setImageResource(imageResId)
-            }
-            binding.slideshowFlipper.addView(imageView)
+        binding.findChildCareButton.setOnClickListener {
+            val url = "https://findunionchildcareor.org/find-child-care"
+            startActivity(Intent(Intent.ACTION_VIEW, url.toUri()))
         }
 
-        binding.slideshowFlipper.flipInterval = 3000 // 3 seconds
-        binding.slideshowFlipper.isAutoStart = true
+        binding.memberResourcesButton.setOnClickListener {
+            val url = "https://findunionchildcareor.org/resources"
+            startActivity(Intent(Intent.ACTION_VIEW, url.toUri()))
+        }
 
-        binding.signupButton.setOnClickListener {
-            val url = "https://findunionchildcareor.org/sign-up-page?"
+        binding.becomeUnionProviderButton.setOnClickListener {
+            val url = "https://findunionchildcareor.org/join-us"
+            startActivity(Intent(Intent.ACTION_VIEW, url.toUri()))
+        }
+
+        binding.whoWeAreButton.setOnClickListener {
+            val url = "https://findunionchildcareor.org/about-us"
+            startActivity(Intent(Intent.ACTION_VIEW, url.toUri()))
+        }
+
+        binding.privacyPolicyLink.setOnClickListener {
+            val url = "https://findunionchildcareor.org/privacy-policy"
+            startActivity(Intent(Intent.ACTION_VIEW, url.toUri()))
+        }
+
+        binding.facebookIcon.setOnClickListener {
+            val url = "https://www.facebook.com/AFSCMEChildCareProviders/"
+            startActivity(Intent(Intent.ACTION_VIEW, url.toUri()))
+        }
+
+        binding.twitterIcon.setOnClickListener {
+            val url = "https://twitter.com/AFSCME"
             startActivity(Intent(Intent.ACTION_VIEW, url.toUri()))
         }
 
