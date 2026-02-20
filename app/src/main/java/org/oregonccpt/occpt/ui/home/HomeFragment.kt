@@ -34,8 +34,7 @@ class HomeFragment : Fragment() {
         }
 
         binding.joinCard.setOnClickListener {
-            val url = "https://findunionchildcareor.org/join-us"
-            startActivity(Intent(Intent.ACTION_VIEW, url.toUri()))
+            findNavController().navigate(R.id.nav_join_afscme)
         }
 
         binding.whoWeAreButton.setOnClickListener {

@@ -28,10 +28,8 @@ class JoinAFSCMEFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val browserIntent = Intent(Intent.ACTION_VIEW, "https://findunionchildcareor.org/join-our-union".toUri())
-        binding.joinButton1.setOnClickListener {
-            startActivity(browserIntent)
-        }
+        val browserIntent = Intent(Intent.ACTION_VIEW, "https://findunionchildcareor.org/sign-up-page".toUri())
+
         binding.joinButton2.setOnClickListener {
             startActivity(browserIntent)
         }
