@@ -44,4 +44,18 @@
     <string name="member_3_quote">"Our certified family facility provides 24/7 care for infants, toddlers, preschoolers and school-aged children. We work hard to meet families needs and the needs of the children we care for. The union provides many training sessions, free to our members, so we and our staff can meet our training requirements to remain licensed and to always be improving our quality of care."</string>
     <string name="member_3_name">- Anita Bates &amp; James Hunter</string>
     <string name="privacy_policy">Privacy Policy | Politica de Privacidad</string>
+
+    <string name="join_afscme_title">BECOME A UNION CHILD CARE PROVIDER</string>
+    <string name="join_afscme_subtitle">Learn more about how being part of Oregon Child Care Providers Together family helps to you and the families you care for. Because we know Oregon does it work with all of us!</string>
+    <string name="join_afscme_button_1">REGISTERED FAMILY &amp; CERTIFIED FAMILY LICENSED PROVIDERS\nJOIN OUR UNION</string>
+    <string name="join_afscme_members_get_title">HERE\'S WHAT MEMBERS GET:</string>
+    <string name="join_afscme_members_get_body">From promotion of your program to other union members and the general public looking for high-quality in-home care.\n\n• Voice to improve the licensed exempt family child care profession over the state of Oregon.\n• Free trainings you can do at home, or later to grow your program, see your professional education to yourself.\n• Access to a free online program to credentialize for you and your partners.\n• Free course Register of competence in serving a family child care program.\n• Free and discounted services such as legal services, accidental insurance, and health services, and much more.\n• Union representation wrestling with you for your rights.</string>
+    <string name="join_afscme_button_2">LICENSED &amp; LOCAL PROVIDERS - JOIN OUR UNION</string>
+    <string name="join_afscme_testimonial_1_quote">\'\'\'When you are a provider, it is easy to feel alone, we don\'t know who to trust or turn to for help. With our union, we have each other\'s backs and a community we can count on. It has been so helpful to have that support system that we can rely on for help and we know they have our interests at heart.\'\'\'</string>
+    <string name="join_afscme_testimonial_1_name">- A &amp; R Family Care</string>
+    <string name="join_afscme_testimonial_2_quote">\'\'\'The union has created a space for us to learn, grow, and stay connected to other providers. We are no longer working in isolation but as a united group, working to make things better for providers, kids, and families in our communities. I have grown so much as a provider and a person thanks to our union!\'\'\'</string>
+    <string name="join_afscme_testimonial_2_name">- Maria Belen C. Owner/Provider</string>
+    <string name="join_afscme_testimonial_3_quote">\'\'\'I am Registered Family provider who also care for my own children with autism. As a member of Oregon Child Care Providers Together because it is single-handedly what is making the profession more professional and with our union behind me, I get paid for the recognizes the importance of the hard work I put into my child care business.\'\'\'</string>
+    <string name="join_afscme_testimonial_3_name">- Anne-Marie L.</string>
+
 </resources>
