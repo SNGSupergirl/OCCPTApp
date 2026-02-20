@@ -37,7 +37,7 @@
             <androidx.cardview.widget.CardView
                 android:id="@+id/parent_card"
                 android:layout_width="0dp"
-                android:layout_height="180dp"
+                android:layout_height="200dp"
                 android:layout_weight="1"
                 app:cardCornerRadius="8dp"
                 app:cardElevation="4dp"
@@ -70,7 +70,7 @@
             <androidx.cardview.widget.CardView
                 android:id="@+id/provider_card"
                 android:layout_width="0dp"
-                android:layout_height="180dp"
+                android:layout_height="200dp"
                 android:layout_weight="1"
                 app:cardCornerRadius="8dp"
                 app:cardElevation="4dp"
@@ -103,7 +103,7 @@
             <androidx.cardview.widget.CardView
                 android:id="@+id/join_card"
                 android:layout_width="0dp"
-                android:layout_height="180dp"
+                android:layout_height="200dp"
                 android:layout_weight="1"
                 app:cardCornerRadius="8dp"
                 app:cardElevation="4dp"
