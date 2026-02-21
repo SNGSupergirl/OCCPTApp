@@ -67,6 +67,17 @@ class MainActivity : AppCompatActivity() {
             } else {
                 popupMenu.menuInflater.inflate(R.menu.profile_menu, popupMenu.menu)
             }
+
+            popupMenu.setOnMenuItemClickListener { menuItem ->
+                when (menuItem.itemId) {
+                    R.id.action_login -> {
+                        navController.navigate(R.id.nav_login)
+                        true
+                    }
+                    else -> false
+                }
+            }
+
             popupMenu.show()
         }
     }
