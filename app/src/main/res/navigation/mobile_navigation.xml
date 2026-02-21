@@ -24,6 +24,12 @@
         tools:layout="@layout/fragment_find_child_care" />
 
     <fragment
+        android:id="@+id/nav_resources"
+        android:name="org.oregonccpt.occpt.ui.resources.ResourcesFragment"
+        android:label="@string/menu_resources"
+        tools:layout="@layout/fragment_resources" />
+
+    <fragment
         android:id="@+id/nav_join_afscme"
         android:name="org.oregonccpt.occpt.ui.joinafscme.JoinAFSCMEFragment"
         android:label="@string/menu_education"
