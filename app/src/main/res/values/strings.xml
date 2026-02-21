@@ -57,5 +57,16 @@
     <string name="join_afscme_testimonial_2_name">- Maria Belen C. Owner/Provider</string>
     <string name="join_afscme_testimonial_3_quote">\'\'\'I am Registered Family provider who also care for my own children with autism. As a member of Oregon Child Care Providers Together because it is single-handedly what is making the profession more professional and with our union behind me, I get paid for the recognizes the importance of the hard work I put into my child care business.\'\'\'</string>
     <string name="join_afscme_testimonial_3_name">- Anne-Marie L.</string>
+    <string name="contact_banner_text">OREGON DOESN\'T\nWORK WITHOUT YOU</string>
+    <string name="contact_update_info_text">Keep your information current in our public child care provider directory.</string>
+    <string name="contact_update_info_button">Update My Information</string>
+    <string name="contact_resources_title">RESOURCES FOR MEMBERS ONLY</string>
+    <string name="contact_resources_text">• Sign up for <![CDATA[<a href="https://www.afscme.org/member-resources/free-trainings">free trainings</a>]]> you can do at home on how to grow your program, run your business and advocate for yourself\n• Access to <![CDATA[<a href="https://www.afscme.org/member-resources/scholarships">scholarship funds</a>]]> for professional development including college courses\n• Connect with <![CDATA[<a href="https://www.afscme.org/member-resources/afscme-advantage">free and discounted services</a>]]>\n• Your <![CDATA[<a href="https://www.afscme.org/about/governance/constitution/bill-of-rights-for-members">Provider Bill of Rights</a>]]></string>
+    <string name="contact_share_text">Know other providers who should join AFSCME? SHARE this page with your Facebook friends.</string>
+    <string name="contact_share_button">Share</string>
+    <string name="contact_questions_title">HAVE QUESTIONS?</string>
+    <string name="contact_questions_text">Visit our local’s website: <![CDATA[<a href="http://oregonccpt.com/">http://oregonccpt.com/</a>]]>\n\nWe have people available to answer any questions you may have about your union membership. Contact our Member Services Center at 1-844-758-6466 or <![CDATA[<a href="mailto:MSC@oregonafscme.org">MSC@oregonafscme.org</a>]]></string>
+    <string name="facebook_icon_description">Facebook</string>
+    <string name="twitter_icon_description">Twitter</string>
 
 </resources>
