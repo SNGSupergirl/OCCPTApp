@@ -97,7 +97,7 @@ class RegistrationFragment : Fragment() {
             } else if (email != confirmEmail) {
                 Toast.makeText(requireContext(), "Emails do not match", Toast.LENGTH_SHORT).show()
             } else if (!isRoleSelected) {
-                Toast.makeText(requireContext(), "Please select at least one role (e.g. parent, provider)", Toast.LENGTH_SHORT).show()
+                Toast.makeText(requireContext(), "Please select at least one role (parent, provider, union member)", Toast.LENGTH_SHORT).show()
             } else {
                 // Perform registration logic here (e.g. call API)
                 Toast.makeText(requireContext(), "Registration submitted for $firstName", Toast.LENGTH_SHORT).show()

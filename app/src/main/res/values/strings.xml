@@ -98,9 +98,12 @@
     <string name="registration_certified_provider">Certified Family Provider (CF)</string>
     <string name="registration_certified_center">Certified Center </string>
     <string name="registration_unlicensed_provider">Unlicensed Provider</string>
-    <string name="registration_username_hint">Username*</string>
-    <string name="registration_password_hint">Password*</string>
+    <string name="registration_username_hint">Create your Username*</string>
+    <string name="registration_password_hint">Create your Password*</string>
     <string name="registration_register_button">Register</string>
     <string name="registration_go_to_login_link">Already have an account? Login</string>
+    <string name="registration_phone_format_hint">Format (no spaces or dashes): xxxxxxxxxx</string>
+    <string name="registration_username_format_hint">(DO NOT use spaces)</string>
+    <string name="registration_password_strength_hint">Password Strength:\n\nStrong passwords contain 3 of the following items and at least 6 characters:\n\n- Uppercase Letters\n- Lowercase Letters\n- Numbers\n- Symbols</string>
 
 </resources>
