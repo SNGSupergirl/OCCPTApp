@@ -52,7 +52,7 @@ class RegistrationFragment : Fragment() {
             binding.phoneProviderDropdown.adapter = adapter
         }
 
-
+      //  binding.countryEditText.setText(getString(R.string.registration_country_default))
 
         // Handle the register button click
         binding.registerButton.setOnClickListener {
@@ -90,7 +90,9 @@ class RegistrationFragment : Fragment() {
                     binding.certifiedCenterCheckbox.isChecked ||
                     binding.unlicensedProviderCheckbox.isChecked
 
-            if (isAnyFieldEmpty) {
+            if (binding.phoneProviderDropdown.selectedItemPosition == 0) {
+                Toast.makeText(requireContext(), "Please select your cell phone carrier", Toast.LENGTH_SHORT).show()
+            } else if (isAnyFieldEmpty) {
                 Toast.makeText(requireContext(), "Please fill out all fields", Toast.LENGTH_SHORT).show()
             } else if (email != confirmEmail) {
                 Toast.makeText(requireContext(), "Emails do not match", Toast.LENGTH_SHORT).show()
