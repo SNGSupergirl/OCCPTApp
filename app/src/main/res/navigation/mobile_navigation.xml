@@ -10,7 +10,19 @@
         android:name="org.oregonccpt.occpt.ui.login.LoginFragment"
         android:label="@string/menu_login"
         tools:layout="@layout/fragment_login" />
-
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="org.oregonccpt.occpt.ui.login.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" />
+    <action
+        android:id="@+id/action_loginFragment_to_registrationFragment"
+        app:destination="@id/registrationFragment" />
+    <fragment
+        android:id="@+id/registrationFragment"
+        android:name="org.oregonccpt.occpt.ui.registration.RegistrationFragment"
+        android:label="fragment_registration"
+        tools:layout="@layout/fragment_registration" />
     <fragment
         android:id="@+id/nav_home"
         android:name="org.oregonccpt.occpt.ui.home.HomeFragment"
@@ -46,4 +58,5 @@
         android:name="org.oregonccpt.occpt.ui.contact.ContactFragment"
         android:label="@string/menu_contact"
         tools:layout="@layout/fragment_contact" />
+
 </navigation>
