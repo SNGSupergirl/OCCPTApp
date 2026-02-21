@@ -51,4 +51,35 @@
         <item>Wisconsin</item>
         <item>Wyoming</item>
     </string-array>
+
+    <string-array name="carriers_array">
+        <item>AT&amp;T</item>
+        <item>T-Mobile</item>
+        <item>Verizon</item>
+        <item>Sprint</item>
+        <item>Xfinity Mobile</item>
+        <item>Visible</item>
+        <item>TracFone</item>
+        <item>Straight Talk</item>
+        <item>US Cellular</item>
+        <item>Total Wireless</item>
+        <item>Virgin Mobile</item>
+        <item>Simple Mobile</item>
+        <item>Alltel</item>
+        <item>Metrotell</item>
+        <item>Republic Wireless</item>
+        <item>Project Fi</item>
+        <item>Page Plus</item>
+        <item>Net10</item>
+        <item>Nextel</item>
+        <item>Mint Mobile</item>
+        <item>Metro PCS</item>
+        <item>H2O Wireless</item>
+        <item>Google Fi</item>
+        <item>FreedomPop</item>
+        <item>Cricket</item>
+        <item>Consumer Cellular</item>
+        <item>Boost Mobile</item>
+        <item>Other</item>
+    </string-array>
 </resources>

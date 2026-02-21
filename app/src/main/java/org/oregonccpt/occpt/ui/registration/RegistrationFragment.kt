@@ -42,7 +42,17 @@ class RegistrationFragment : Fragment() {
             }
         }
 
-        binding.countryEditText.setText("United States")
+        // Populate the phone provider dropdown
+        ArrayAdapter.createFromResource(
+            requireContext(),
+            R.array.carriers_array,
+            android.R.layout.simple_spinner_item
+        ).also { adapter ->
+            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+            binding.phoneProviderDropdown.adapter = adapter
+        }
+
+
 
         // Handle the register button click
         binding.registerButton.setOnClickListener {
