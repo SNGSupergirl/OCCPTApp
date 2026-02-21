@@ -69,5 +69,9 @@
     <string name="facebook_icon_description">Facebook</string>
     <string name="twitter_icon_description">Twitter</string>
     <string name="resources_fragment">Resources Fragment</string>
+    <string name="action_login">Login</string>
+    <string name="action_register">Register</string>
+    <string name="action_profile">Profile</string>
+    <string name="action_logout">Log Out</string>
 
 </resources>

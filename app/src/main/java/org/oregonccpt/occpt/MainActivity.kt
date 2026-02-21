@@ -5,6 +5,7 @@ import android.net.Uri
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.PopupMenu
 import com.google.android.material.navigation.NavigationView
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
@@ -19,6 +20,7 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityMainBinding
+    private var isLoggedIn = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -56,6 +58,16 @@ class MainActivity : AppCompatActivity() {
             )
             setupActionBarWithNavController(navController, appBarConfiguration)
             it.setupWithNavController(navController)
+        }
+
+        binding.appBarMain.profileImage.setOnClickListener {
+            val popupMenu = PopupMenu(this, it)
+            if (isLoggedIn) {
+                popupMenu.menuInflater.inflate(R.menu.profile_menu_logged_in, popupMenu.menu)
+            } else {
+                popupMenu.menuInflater.inflate(R.menu.profile_menu, popupMenu.menu)
+            }
+            popupMenu.show()
         }
     }
 
