@@ -76,5 +76,31 @@
     <string name="menu_login">Login</string>
     <string name="facebook_login_description">Facebook Login</string>
     <string name="google_login_description">Google Login</string>
+    <string name="registration_create_account_title">Create Account</string>
+    <string name="registration_first_name_hint">First Name*</string>
+    <string name="registration_last_name_hint">Last Name*</string>
+    <string name="registration_address_hint">Address*</string>
+    <string name="registration_city_hint">City*</string>
+    <string name="registration_state_hint">State*</string>
+    <string name="registration_postal_code_hint">Postal Code*</string>
+    <string name="registration_county_hint">County*</string>
+    <string name="registration_country_hint">Country</string>
+    <string name="registration_phone_hint">Phone</string>
+    <string name="registration_receive_text_alerts">Receive Text Alerts</string>
+    <string name="registration_email_hint">Email Address*</string>
+    <string name="registration_confirm_email_hint">Confirm Email Address*</string>
+    <string name="registration_email_view">Allow other members to view my email address</string>
+    <string name="registration_subscribe_to_email_list">Subscribe to Email List</string>
+    <string name="registration_select_roles_title">Select your role(s)</string>
+    <string name="registration_union_member">Union Member*</string>
+    <string name="registration_parent">Parent Looking for Child Care</string>
+    <string name="registration_registered_provider">Registered Family Provider (RF)</string>
+    <string name="registration_certified_provider">Certified Family Provider (CF)</string>
+    <string name="registration_certified_center">Certified Center </string>
+    <string name="registration_unlicensed_provider">Unlicensed Provider</string>
+    <string name="registration_username_hint">Username*</string>
+    <string name="registration_password_hint">Password*</string>
+    <string name="registration_register_button">Register</string>
+    <string name="registration_go_to_login_link">Already have an account? Login</string>
 
 </resources>
