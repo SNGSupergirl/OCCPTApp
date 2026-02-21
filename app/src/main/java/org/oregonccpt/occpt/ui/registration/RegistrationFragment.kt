@@ -1,10 +1,12 @@
 package org.oregonccpt.occpt.ui.registration
 
+import android.app.AlertDialog
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
+import android.widget.ImageView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
@@ -53,6 +55,10 @@ class RegistrationFragment : Fragment() {
         }
 
       //  binding.countryEditText.setText(getString(R.string.registration_country_default))
+
+        binding.avatarImageView.setOnClickListener {
+            showAvatarPickerDialog()
+        }
 
         // Handle the register button click
         binding.registerButton.setOnClickListener {
@@ -111,6 +117,59 @@ class RegistrationFragment : Fragment() {
             // Navigate up (back) in the navigation graph
             findNavController().navigateUp()
         }
+    }
+
+    private fun showAvatarPickerDialog() {
+        val builder = AlertDialog.Builder(requireContext())
+        val inflater = requireActivity().layoutInflater
+        val dialogView = inflater.inflate(R.layout.dialog_avatar_picker, null)
+        builder.setView(dialogView)
+
+        val dialog = builder.create()
+
+        val avatar1 = dialogView.findViewById<ImageView>(R.id.avatar_1)
+        val avatar2 = dialogView.findViewById<ImageView>(R.id.avatar_2)
+        val avatar3 = dialogView.findViewById<ImageView>(R.id.avatar_3)
+        val avatar4 = dialogView.findViewById<ImageView>(R.id.avatar_4)
+        val avatar5 = dialogView.findViewById<ImageView>(R.id.avatar_5)
+        val avatar6 = dialogView.findViewById<ImageView>(R.id.avatar_6)
+        val avatar7 = dialogView.findViewById<ImageView>(R.id.avatar_7)
+        val avatar8 = dialogView.findViewById<ImageView>(R.id.avatar_8)
+
+        avatar1.setOnClickListener { 
+            binding.avatarImageView.setImageResource(R.drawable.ic_avatar_1)
+            dialog.dismiss()
+        }
+        avatar2.setOnClickListener { 
+            binding.avatarImageView.setImageResource(R.drawable.ic_avatar_2)
+            dialog.dismiss()
+        }
+        avatar3.setOnClickListener { 
+            binding.avatarImageView.setImageResource(R.drawable.ic_avatar_3)
+            dialog.dismiss()
+        }
+        avatar4.setOnClickListener { 
+            binding.avatarImageView.setImageResource(R.drawable.ic_avatar_4)
+            dialog.dismiss()
+        }
+        avatar5.setOnClickListener { 
+            binding.avatarImageView.setImageResource(R.drawable.ic_avatar_5)
+            dialog.dismiss()
+        }
+        avatar6.setOnClickListener { 
+            binding.avatarImageView.setImageResource(R.drawable.ic_avatar_6)
+            dialog.dismiss()
+        }
+        avatar7.setOnClickListener { 
+            binding.avatarImageView.setImageResource(R.drawable.ic_avatar_7)
+            dialog.dismiss()
+        }
+        avatar8.setOnClickListener { 
+            binding.avatarImageView.setImageResource(R.drawable.ic_avatar_8)
+            dialog.dismiss()
+        }
+
+        dialog.show()
     }
 
     override fun onDestroyView() {
