@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:columnCount="4"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/border_1"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/user_boarder_1" />
+
+    <ImageView
+        android:id="@+id/border_2"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/user_boarder_2" />
+
+    <ImageView
+        android:id="@+id/border_3"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/user_boarder_3" />
+
+    <ImageView
+        android:id="@+id/border_4"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/user_boarder_4" />
+
+    <ImageView
+        android:id="@+id/border_5"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/user_boarder_5" />
+
+    <ImageView
+        android:id="@+id/border_6"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/user_boarder_6" />
+
+    <ImageView
+        android:id="@+id/border_7"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/user_boarder_7" />
+
+    <ImageView
+        android:id="@+id/border_8"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/user_boarder_8" />
+
+    <ImageView
+        android:id="@+id/border_9"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/user_boarder_9" />
+
+    <ImageView
+        android:id="@+id/border_10"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/user_boarder_10" />
+
+    <ImageView
+        android:id="@+id/border_11"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/user_boarder_11" />
+
+    <ImageView
+        android:id="@+id/border_12"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/user_boarder_12" />
+
+</GridLayout>

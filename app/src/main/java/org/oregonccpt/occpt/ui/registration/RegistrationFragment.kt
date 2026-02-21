@@ -54,10 +54,10 @@ class RegistrationFragment : Fragment() {
             binding.phoneProviderDropdown.adapter = adapter
         }
 
-      //  binding.countryEditText.setText(getString(R.string.registration_country_default))
+        //binding.countryEditText.setText(getString(R.string.registration_country_default))
 
-        binding.avatarImageView.setOnClickListener {
-            showAvatarPickerDialog()
+        binding.avatarLayout.setOnClickListener {
+            showEditAvatarOrBorderDialog()
         }
 
         // Handle the register button click
@@ -119,6 +119,19 @@ class RegistrationFragment : Fragment() {
         }
     }
 
+    private fun showEditAvatarOrBorderDialog() {
+        val options = arrayOf("Change Avatar", "Change Border")
+        AlertDialog.Builder(requireContext())
+            .setTitle("Customize your profile")
+            .setItems(options) { dialog, which ->
+                when (which) {
+                    0 -> showAvatarPickerDialog()
+                    1 -> showBorderPickerDialog()
+                }
+            }
+            .show()
+    }
+
     private fun showAvatarPickerDialog() {
         val builder = AlertDialog.Builder(requireContext())
         val inflater = requireActivity().layoutInflater
@@ -166,6 +179,79 @@ class RegistrationFragment : Fragment() {
         }
         avatar8.setOnClickListener { 
             binding.avatarImageView.setImageResource(R.drawable.ic_avatar_8)
+            dialog.dismiss()
+        }
+
+        dialog.show()
+    }
+
+    private fun showBorderPickerDialog() {
+        val builder = AlertDialog.Builder(requireContext())
+        val inflater = requireActivity().layoutInflater
+        val dialogView = inflater.inflate(R.layout.dialog_border_picker, null)
+        builder.setView(dialogView)
+
+        val dialog = builder.create()
+
+        val border1 = dialogView.findViewById<ImageView>(R.id.border_1)
+        val border2 = dialogView.findViewById<ImageView>(R.id.border_2)
+        val border3 = dialogView.findViewById<ImageView>(R.id.border_3)
+        val border4 = dialogView.findViewById<ImageView>(R.id.border_4)
+        val border5 = dialogView.findViewById<ImageView>(R.id.border_5)
+        val border6 = dialogView.findViewById<ImageView>(R.id.border_6)
+        val border7 = dialogView.findViewById<ImageView>(R.id.border_7)
+        val border8 = dialogView.findViewById<ImageView>(R.id.border_8)
+        val border9 = dialogView.findViewById<ImageView>(R.id.border_9)
+        val border10 = dialogView.findViewById<ImageView>(R.id.border_10)
+        val border11 = dialogView.findViewById<ImageView>(R.id.border_11)
+        val border12 = dialogView.findViewById<ImageView>(R.id.border_12)
+
+        border1.setOnClickListener { 
+            binding.avatarBorderImageView.setImageResource(R.drawable.user_boarder_1)
+            dialog.dismiss()
+        }
+        border2.setOnClickListener { 
+            binding.avatarBorderImageView.setImageResource(R.drawable.user_boarder_2)
+            dialog.dismiss()
+        }
+        border3.setOnClickListener { 
+            binding.avatarBorderImageView.setImageResource(R.drawable.user_boarder_3)
+            dialog.dismiss()
+        }
+        border4.setOnClickListener { 
+            binding.avatarBorderImageView.setImageResource(R.drawable.user_boarder_4)
+            dialog.dismiss()
+        }
+        border5.setOnClickListener { 
+            binding.avatarBorderImageView.setImageResource(R.drawable.user_boarder_5)
+            dialog.dismiss()
+        }
+        border6.setOnClickListener { 
+            binding.avatarBorderImageView.setImageResource(R.drawable.user_boarder_6)
+            dialog.dismiss()
+        }
+        border7.setOnClickListener { 
+            binding.avatarBorderImageView.setImageResource(R.drawable.user_boarder_7)
+            dialog.dismiss()
+        }
+        border8.setOnClickListener { 
+            binding.avatarBorderImageView.setImageResource(R.drawable.user_boarder_8)
+            dialog.dismiss()
+        }
+        border9.setOnClickListener { 
+            binding.avatarBorderImageView.setImageResource(R.drawable.user_boarder_9)
+            dialog.dismiss()
+        }
+        border10.setOnClickListener { 
+            binding.avatarBorderImageView.setImageResource(R.drawable.user_boarder_10)
+            dialog.dismiss()
+        }
+        border11.setOnClickListener { 
+            binding.avatarBorderImageView.setImageResource(R.drawable.user_boarder_11)
+            dialog.dismiss()
+        }
+        border12.setOnClickListener { 
+            binding.avatarBorderImageView.setImageResource(R.drawable.user_boarder_12)
             dialog.dismiss()
         }
 

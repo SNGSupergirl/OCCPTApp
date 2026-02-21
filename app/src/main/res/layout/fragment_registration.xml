@@ -18,15 +18,28 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/avatar_image_view"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+    <FrameLayout
+        android:id="@+id/avatar_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:src="@drawable/ic_profile"
         app:layout_constraintTop_toBottomOf="@id/registration_title"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/avatar_image_view"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/ic_profile" />
+
+        <ImageView
+            android:id="@+id/avatar_border_image_view"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/user_boarder_1" />
+
+    </FrameLayout>
 
     <ScrollView
         android:layout_width="0dp"
@@ -35,7 +48,7 @@
         app:layout_constraintBottom_toTopOf="@id/register_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/avatar_image_view">
+        app:layout_constraintTop_toBottomOf="@id/avatar_layout">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -366,7 +379,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
-        android.layout.marginBottom="8dp"
+        android:layout_marginBottom="8dp"
         android:text="@string/registration_register_button"
         app:layout_constraintBottom_toTopOf="@id/go_to_login_link"
         app:layout_constraintEnd_toEndOf="parent"
