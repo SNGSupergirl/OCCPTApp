@@ -74,5 +74,7 @@
     <string name="action_profile">Profile</string>
     <string name="action_logout">Log Out</string>
     <string name="menu_login">Login</string>
+    <string name="facebook_login_description">Facebook Login</string>
+    <string name="google_login_description">Google Login</string>
 
 </resources>
