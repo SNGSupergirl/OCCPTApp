@@ -74,6 +74,10 @@ class MainActivity : AppCompatActivity() {
                         navController.navigate(R.id.nav_login)
                         true
                     }
+                    R.id.action_register -> {
+                        navController.navigate(R.id.nav_registration)
+                        true
+                    }
                     else -> false
                 }
             }

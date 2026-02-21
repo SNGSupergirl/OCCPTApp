@@ -42,6 +42,8 @@ class RegistrationFragment : Fragment() {
             }
         }
 
+        binding.countryEditText.setText("United States")
+
         // Handle the register button click
         binding.registerButton.setOnClickListener {
             val firstName = binding.firstNameEditText.text.toString().trim()

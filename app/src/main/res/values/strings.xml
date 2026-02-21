@@ -92,7 +92,7 @@
     <string name="registration_email_view">Allow other members to view my email address</string>
     <string name="registration_subscribe_to_email_list">Subscribe to Email List</string>
     <string name="registration_select_roles_title">Select your role(s)</string>
-    <string name="registration_union_member">Union Member*</string>
+    <string name="registration_union_member">Union Member of Local 132 (AFSCME)</string>
     <string name="registration_parent">Parent Looking for Child Care</string>
     <string name="registration_registered_provider">Registered Family Provider (RF)</string>
     <string name="registration_certified_provider">Certified Family Provider (CF)</string>
