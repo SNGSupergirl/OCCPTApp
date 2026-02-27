@@ -13,13 +13,13 @@
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#388E3C"
+            android:layout_height="96dp"
+            android:background="@drawable/afscme_local_banner"
             android:fontFamily="@font/chilanka"
             android:gravity="center_horizontal"
             android:padding="12dp"
-            android:text="@string/afscme_local_132"
-            android:textColor="@android:color/white"
+            android:text=""
+            android:textColor="@android:color/holo_green_dark"
             android:textSize="30sp"
             android:textStyle="bold" />
 
@@ -69,6 +69,7 @@
                 android:layout_gravity="center_horizontal"
                 android:fontFamily="@font/chilanka"
                 android:gravity="center_horizontal"
+                android:background="@color/cardview_shadow_start_color"
                 android:text="@string/our_union"
                 android:textColor="@android:color/white"
                 android:textSize="30sp"
@@ -97,7 +98,7 @@
             <Button
                 android:id="@+id/officers_button"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="60dp"
                 android:layout_weight="1"
                 android:text="@string/our_officers_staff"
                 android:layout_marginEnd="8dp"/>
@@ -105,7 +106,7 @@
             <Button
                 android:id="@+id/join_union_button"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="60dp"
                 android:layout_weight="1"
                 android:text="@string/join_the_union"
                 android:layout_marginStart="8dp"/>
