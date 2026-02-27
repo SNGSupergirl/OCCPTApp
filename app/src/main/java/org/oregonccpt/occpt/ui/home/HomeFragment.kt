@@ -9,6 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.net.toUri
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.google.android.material.tabs.TabLayoutMediator
 import org.oregonccpt.occpt.R
 import org.oregonccpt.occpt.databinding.FragmentHomeBinding
@@ -47,6 +48,14 @@ class HomeFragment : Fragment() {
         binding.facebookIcon.setOnClickListener {
             val url = "https://www.facebook.com/AFSCMEChildCareProviders/"
             startActivity(Intent(Intent.ACTION_VIEW, url.toUri()))
+        }
+
+        binding.officersButton.setOnClickListener {
+            findNavController().navigate(R.id.action_nav_home_to_nav_officers)
+        }
+
+        binding.joinUnionButton.setOnClickListener {
+            findNavController().navigate(R.id.nav_join_afscme)
         }
 
         return binding.root

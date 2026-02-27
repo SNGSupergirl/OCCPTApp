@@ -58,7 +58,7 @@
             android:fontFamily="@font/chilanka"
             android:textSize="20sp"
             android:textStyle="bold"
-            android:text="@string/welcome_provider" />
+            android:text="@string/afscme_local_132" />
 
     </com.google.android.material.appbar.AppBarLayout>
 
