@@ -1,6 +1,7 @@
 package org.oregonccpt.occpt.ui.home
 
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
@@ -55,7 +56,11 @@ class HomeFragment : Fragment() {
         }
 
         binding.joinUnionButton.setOnClickListener {
-            findNavController().navigate(R.id.nav_join_afscme)
+            val url = "https://findunionchildcareor.org/sign-up-page/"
+            val intent = Intent(Intent.ACTION_VIEW).apply {
+                data = Uri.parse(url)
+            }
+            startActivity(intent)
         }
 
         return binding.root

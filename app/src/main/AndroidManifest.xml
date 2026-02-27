@@ -15,12 +15,9 @@
         android:theme="@style/Theme.OCCPT"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
+            android:name=".IntroActivity"
             android:exported="true"
-            android:label="@string/app_name"
-            android:resizeableActivity="true"
-            android:theme="@style/Theme.OCCPT.NoActionBar"
-            tools:targetApi="24">
+            android:theme="@style/Theme.OCCPT.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -28,9 +25,12 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".IntroActivity"
+            android:name=".MainActivity"
             android:exported="false"
-            android:theme="@style/Theme.OCCPT.NoActionBar" />
+            android:label="@string/app_name"
+            android:resizeableActivity="true"
+            android:theme="@style/Theme.OCCPT.NoActionBar"
+            tools:targetApi="24" />
     </application>
 
 </manifest>
