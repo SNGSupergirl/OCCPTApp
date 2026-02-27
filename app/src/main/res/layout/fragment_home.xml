@@ -85,6 +85,33 @@
                 android:textColor="@android:color/white" />
         </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/officers_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/our_officers_staff"
+                android:layout_marginEnd="8dp"/>
+
+            <Button
+                android:id="@+id/join_union_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/join_the_union"
+                android:layout_marginStart="8dp"/>
+
+        </LinearLayout>
+
         <ImageView
             android:id="@+id/facebook_icon"
             android:layout_width="36dp"

@@ -1,4 +1,4 @@
-package org.oregonccpt.occpt.ui.findchildcare
+package org.oregonccpt.occpt.ui.ourstaff
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import org.oregonccpt.occpt.databinding.FragmentFindChildCareBinding
 
-class FindChildCareFragment : Fragment() {
+class OurStaffFragment : Fragment() {
 
     private var _binding: FragmentFindChildCareBinding? = null
     private val binding get() = _binding!!

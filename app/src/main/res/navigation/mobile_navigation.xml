@@ -42,7 +42,7 @@
 
     <fragment
         android:id="@+id/nav_find_child_care"
-        android:name="org.oregonccpt.occpt.ui.findchildcare.FindChildCareFragment"
+        android:name="org.oregonccpt.occpt.ui.ourstaff.OurStaffFragment"
         android:label="@string/menu_find_child_care"
         tools:layout="@layout/fragment_find_child_care" />
 
