@@ -15,12 +15,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#388E3C"
+            android:fontFamily="@font/chilanka"
+            android:gravity="center_horizontal"
             android:padding="12dp"
             android:text="@string/afscme_local_132"
             android:textColor="@android:color/white"
-            android:textSize="22sp"
-            android:textStyle="bold"
-            android:gravity="center_horizontal"/>
+            android:textSize="30sp"
+            android:textStyle="bold" />
 
         <androidx.cardview.widget.CardView
             android:id="@+id/parent_card"
@@ -63,19 +64,23 @@
             android:padding="16dp">
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="412dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
+                android:fontFamily="@font/chilanka"
+                android:gravity="center_horizontal"
                 android:text="@string/our_union"
                 android:textColor="@android:color/white"
-                android:textSize="24sp"
+                android:textSize="30sp"
                 android:textStyle="bold" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
+                android:fontFamily="@font/chilanka"
                 android:gravity="center_horizontal"
+                android:textSize="19sp"
                 android:text="@string/our_union_body"
                 android:textColor="@android:color/white" />
         </LinearLayout>

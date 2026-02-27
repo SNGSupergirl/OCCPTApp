@@ -32,6 +32,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:fontFamily="@font/chilanka"
                 android:text="@string/welcome_provider"
                 android:textColor="@android:color/black"
                 android:textSize="20sp"
@@ -54,6 +55,7 @@
             android:layout_width="333dp"
             android:layout_marginStart="12dp"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/chilanka"
             android:textSize="20sp"
             android:textStyle="bold"
             android:text="@string/welcome_provider" />
