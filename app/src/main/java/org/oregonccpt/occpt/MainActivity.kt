@@ -27,6 +27,7 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         setSupportActionBar(binding.appBarMain.toolbar)
+        supportActionBar?.setDisplayShowTitleEnabled(false) // Hide default title to use custom TextView
 
         binding.appBarMain.fab.setOnClickListener {
             val intent = Intent(Intent.ACTION_SENDTO).apply {
@@ -60,7 +61,7 @@ class MainActivity : AppCompatActivity() {
             it.setupWithNavController(navController)
         }
 
-        binding.appBarMain.profileImage.setOnClickListener {
+        binding.appBarMain.overflowMenu?.setOnClickListener {
             val popupMenu = PopupMenu(this, it)
             if (isLoggedIn) {
                 popupMenu.menuInflater.inflate(R.menu.profile_menu_logged_in, popupMenu.menu)

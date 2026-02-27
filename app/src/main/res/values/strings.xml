@@ -32,6 +32,7 @@
     <string name="menu_contact">Contact Us</string>
     <string name="open_local_pdf">Open Local PDF</string>
     <string name="logo_description">App Logo</string>
+    <string name="overflow_menu_description">More options</string>
 
     <string name="who_we_are">WHO WE ARE</string>
     <string name="about_us_title">ABOUT US</string>
@@ -106,4 +107,9 @@
     <string name="registration_username_format_hint">(DO NOT use spaces)</string>
     <string name="registration_password_strength_hint">Password Strength:\n\nStrong passwords contain 3 of the following items and at least 6 characters:\n\n- Uppercase Letters\n- Lowercase Letters\n- Numbers\n- Symbols</string>
 
+    <string name="welcome_provider">Welcome, Provider!</string>
+    <string name="afscme_local_132">AFSCME LOCAL 132</string>
+    <string name="our_union">Our Union</string>
+    <string name="our_union_body">At Oregon AFSCME Child Care Providers Together, we\'re more than just a union, we\'re a family. We proudly support our small, in-home providers who pour their hearts into giving Oregon\'s children the very best care. By choosing an AFSCME-supported home, families get that special, personalized attention every child deserves, while our providers get the steady hand of a supportive community behind them every step of the way.</string>
+    <string name="copyright">Copyright © 2026. All Rights Reserved. AFSCME Local 132</string>
 </resources>

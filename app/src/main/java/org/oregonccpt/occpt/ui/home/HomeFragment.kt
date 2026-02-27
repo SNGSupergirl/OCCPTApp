@@ -9,7 +9,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.net.toUri
 import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.findNavController
 import com.google.android.material.tabs.TabLayoutMediator
 import org.oregonccpt.occpt.R
 import org.oregonccpt.occpt.databinding.FragmentHomeBinding
@@ -45,22 +44,8 @@ class HomeFragment : Fragment() {
 
         createSlideShow()
 
-        binding.whoWeAreButton.setOnClickListener {
-            findNavController().navigate(R.id.nav_about)
-        }
-
-        binding.privacyPolicyLink.setOnClickListener {
-            val url = "https://findunionchildcareor.org/privacy-policy"
-            startActivity(Intent(Intent.ACTION_VIEW, url.toUri()))
-        }
-
         binding.facebookIcon.setOnClickListener {
             val url = "https://www.facebook.com/AFSCMEChildCareProviders/"
-            startActivity(Intent(Intent.ACTION_VIEW, url.toUri()))
-        }
-
-        binding.twitterIcon.setOnClickListener {
-            val url = "https://twitter.com/AFSCME"
             startActivity(Intent(Intent.ACTION_VIEW, url.toUri()))
         }
 
