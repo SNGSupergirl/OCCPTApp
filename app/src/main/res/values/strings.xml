@@ -52,6 +52,9 @@
     <string name="officer_name_placeholder">Officer Name</string>
     <string name="officer_title_placeholder">Officer Title</string>
     <string name="officer_photo_content_description">Photo of the officer</string>
+    <string name="call_officer_content_description">Call officer</string>
+    <string name="email_officer_content_description">Email officer</string>
+    <string name="add_officer_contact_content_description">Add officer to contacts</string>
 
     <string name="join_afscme_title">BECOME A UNION CHILD CARE PROVIDER</string>
     <string name="join_afscme_subtitle">Learn more about how being part of Oregon Child Care Providers Together family helps to you and the families you care for. Because we know Oregon does it work with all of us!</string>
