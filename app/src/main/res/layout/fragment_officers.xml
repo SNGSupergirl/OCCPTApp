@@ -11,6 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
+        android:fontFamily="@font/chilanka"
         android:padding="16dp"
         android:text="@string/our_officers_staff_title"
         android:textSize="24sp"

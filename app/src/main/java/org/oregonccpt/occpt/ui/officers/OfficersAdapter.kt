@@ -12,7 +12,7 @@ import coil.load
 import org.oregonccpt.occpt.R
 import org.oregonccpt.occpt.databinding.ItemOfficerCardBinding
 
-data class Officer(val name: String, val title: String, val photo: Int, val email: String?, val phone: String?)
+data class Officer(val name: String, val title: String, val photo: Int, val email: String?, val phone: String?, val bio: String?, var isExpanded: Boolean = false)
 
 class OfficersAdapter(private val officers: List<Officer>) : RecyclerView.Adapter<OfficersAdapter.ViewHolder>() {
 
@@ -25,6 +25,9 @@ class OfficersAdapter(private val officers: List<Officer>) : RecyclerView.Adapte
         val officer = officers[position]
         holder.binding.officerName.text = officer.name
         holder.binding.officerTitle.text = officer.title
+        holder.binding.officerBio.text = officer.bio
+
+        holder.binding.officerBio.visibility = if (officer.isExpanded) View.VISIBLE else View.GONE
 
         if (officer.email != null) {
             holder.binding.officerEmail.text = officer.email
@@ -64,7 +67,7 @@ class OfficersAdapter(private val officers: List<Officer>) : RecyclerView.Adapte
             holder.binding.officerPhoto.setImageResource(R.drawable.ic_profile_placeholder)
         }
 
-        if (officer.email != null || officer.phone != null) {
+        if(officer.email != null || officer.phone != null) {
             holder.binding.addContactIcon.visibility = View.VISIBLE
             holder.binding.addContactIcon.setOnClickListener {
                 val intent = Intent(ContactsContract.Intents.Insert.ACTION).apply {
@@ -77,6 +80,11 @@ class OfficersAdapter(private val officers: List<Officer>) : RecyclerView.Adapte
             }
         } else {
             holder.binding.addContactIcon.visibility = View.GONE
+        }
+
+        holder.itemView.setOnClickListener {
+            officer.isExpanded = !officer.isExpanded
+            notifyItemChanged(position)
         }
     }
 

@@ -14,6 +14,7 @@
             android:id="@+id/officer_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/chilanka"
             android:text="@string/officer_title_placeholder"
             android:textSize="18sp"
             android:textStyle="bold" />
@@ -45,6 +46,7 @@
                     android:id="@+id/officer_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/chilanka"
                     android:text="@string/officer_name_placeholder"
                     android:textSize="16sp" />
 
@@ -66,11 +68,19 @@
 
         </LinearLayout>
 
+        <TextView
+            android:id="@+id/officer_bio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/officer_info_layout"
+            android:layout_marginTop="8dp"
+            android:visibility="gone"/>
+
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_below="@id/officer_info_layout"
+            android:layout_below="@id/officer_bio"
             android:layout_alignParentEnd="true"
             android:layout_marginTop="8dp">
 
