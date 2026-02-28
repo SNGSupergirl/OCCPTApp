@@ -6,7 +6,12 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import org.oregonccpt.occpt.databinding.ItemBenefitCardBinding
 
-data class Benefit(val title: String, val description: String, var isExpanded: Boolean = false)
+data class Benefit(
+    val title: String? = null,
+    val description: String,
+    val titleImage: Int? = null,
+    var isExpanded: Boolean = false
+)
 
 class BenefitsAdapter(private val benefits: List<Benefit>) : RecyclerView.Adapter<BenefitsAdapter.ViewHolder>() {
 
@@ -17,7 +22,17 @@ class BenefitsAdapter(private val benefits: List<Benefit>) : RecyclerView.Adapte
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val benefit = benefits[position]
-        holder.binding.benefitTitle.text = benefit.title
+
+        if (benefit.title != null) {
+            holder.binding.benefitTitle.text = benefit.title
+            holder.binding.benefitTitle.visibility = View.VISIBLE
+            holder.binding.benefitTitleImage.visibility = View.GONE
+        } else if (benefit.titleImage != null) {
+            holder.binding.benefitTitleImage.setImageResource(benefit.titleImage)
+            holder.binding.benefitTitleImage.visibility = View.VISIBLE
+            holder.binding.benefitTitle.visibility = View.GONE
+        }
+
         holder.binding.benefitDescription.text = benefit.description
 
         holder.binding.benefitDescription.visibility = if (benefit.isExpanded) View.VISIBLE else View.GONE
