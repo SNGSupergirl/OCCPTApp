@@ -63,15 +63,15 @@
         tools:layout="@layout/fragment_join_afscme" />
 
     <fragment
-        android:id="@+id/nav_contact"
-        android:name="org.oregonccpt.occpt.ui.contact.ContactFragment"
-        android:label="@string/menu_contact"
-        tools:layout="@layout/fragment_contact" />
-
-    <fragment
         android:id="@+id/nav_officers"
         android:name="org.oregonccpt.occpt.ui.officers.OfficersFragment"
         android:label="@string/our_officers_staff_title"
         tools:layout="@layout/fragment_officers" />
+
+    <fragment
+        android:id="@+id/nav_benefits"
+        android:name="org.oregonccpt.occpt.ui.benefits.BenefitsFragment"
+        android:label="@string/benefits_title"
+        tools:layout="@layout/fragment_benefits" />
 
 </navigation>

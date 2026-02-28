@@ -18,11 +18,11 @@
             android:title="@string/menu_resources" />
         <item
             android:id="@+id/nav_join_afscme"
-            android:icon="@drawable/ic_join"
+            android:icon="@drawable/ic_benefits"
             android:title="@string/menu_join_afscme" />
         <item
-            android:id="@+id/nav_contact"
-            android:icon="@drawable/ic_email_black_24dp"
-            android:title="@string/menu_contact" />
+            android:id="@+id/nav_benefits"
+            android:icon="@drawable/ic_benefits"
+            android:title="@string/menu_benefits" />
     </group>
 </menu>

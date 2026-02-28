@@ -27,12 +27,14 @@
     <string name="menu_find_child_care">Events/Trainings</string>
     <string name="menu_resources">Resources</string>
     <string name="menu_grants">Grants</string>
+    <string name="menu_benefits">Benefits</string>
     <string name="menu_education">Join AFSCME</string>
     <string name="menu_join_afscme">Join AFSCME</string>
     <string name="menu_contact">Contact Us</string>
     <string name="open_local_pdf">Open Local PDF</string>
     <string name="logo_description">App Logo</string>
     <string name="overflow_menu_description">More options</string>
+    <string name="benefits_title">Benefits</string>
 
     <string name="who_we_are">WHO WE ARE</string>
     <string name="about_us_title">ABOUT US</string>
