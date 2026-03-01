@@ -22,7 +22,7 @@ class BenefitsFragment : Fragment() {
 
         val benefits = listOf(
             Benefit("State & CCPT Childcare Retirement Benefit", "The State & CCPT Child Care Retirement Benefit is retirement account funding paid by the State of Oregon to all registered and certified family child care providers (RF/CF providers) who have an active license on of 12/11/23."),
-            Benefit(titleImage = R.drawable.healthiestyou_logo, description = "Connect to doctors 24/7 for diagnosis, treatment, and more, all from a single app as part of your HealthiestYou membership. A free, fast, and easy way to take care of your health."),
+            Benefit(titleImage = R.drawable.healthiestyou_logo, description = "Connect to doctors 24/7 for diagnosis, treatment, and more, all from a single app as part of your HealthiestYou membership. A free, fast, and easy way to take care of your health.", moreInfoUrl = "https://www.teladochealth.com/healthiestyou"),
             Benefit("Dental", "More information coming soon!")
         )
 

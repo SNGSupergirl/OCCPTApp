@@ -11,7 +11,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
-        android:padding="16dp"
+        android:padding="19dp"
+        android:fontFamily="@font/chilanka"
         android:text="@string/benefits_title"
         android:textSize="24sp"
         android:textStyle="bold" />

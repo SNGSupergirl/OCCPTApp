@@ -1,8 +1,11 @@
 package org.oregonccpt.occpt.ui.benefits
 
+import android.content.Intent
+import android.net.Uri
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import org.oregonccpt.occpt.databinding.ItemBenefitCardBinding
 
@@ -10,6 +13,7 @@ data class Benefit(
     val title: String? = null,
     val description: String,
     val titleImage: Int? = null,
+    val moreInfoUrl: String? = null,
     var isExpanded: Boolean = false
 )
 
@@ -35,7 +39,22 @@ class BenefitsAdapter(private val benefits: List<Benefit>) : RecyclerView.Adapte
 
         holder.binding.benefitDescription.text = benefit.description
 
-        holder.binding.benefitDescription.visibility = if (benefit.isExpanded) View.VISIBLE else View.GONE
+        if (benefit.isExpanded) {
+            holder.binding.benefitDetailsLayout.visibility = View.VISIBLE
+            if (benefit.moreInfoUrl != null) {
+                holder.binding.moreInfoButton.visibility = View.VISIBLE
+                holder.binding.moreInfoButton.setOnClickListener {
+                    val intent = Intent(Intent.ACTION_VIEW).apply {
+                        data = Uri.parse(benefit.moreInfoUrl)
+                    }
+                    ContextCompat.startActivity(holder.itemView.context, intent, null)
+                }
+            } else {
+                holder.binding.moreInfoButton.visibility = View.GONE
+            }
+        } else {
+            holder.binding.benefitDetailsLayout.visibility = View.GONE
+        }
 
         holder.itemView.setOnClickListener {
             benefit.isExpanded = !benefit.isExpanded
