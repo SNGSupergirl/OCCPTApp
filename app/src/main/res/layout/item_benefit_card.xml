@@ -14,7 +14,7 @@
 
         <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="80dp"
             android:padding="16dp">
 
             <TextView
@@ -27,9 +27,11 @@
 
             <ImageView
                 android:id="@+id/benefit_title_image"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:visibility="gone"/>
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitCenter"
+                android:visibility="gone"
+                android:contentDescription="@string/healthiest_you_logo_description"/>
 
         </FrameLayout>
 
