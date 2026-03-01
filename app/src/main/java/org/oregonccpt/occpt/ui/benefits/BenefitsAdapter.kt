@@ -14,6 +14,7 @@ data class Benefit(
     val description: String,
     val titleImage: Int? = null,
     val moreInfoUrl: String? = null,
+    val faqUrl: String? = null,
     var isExpanded: Boolean = false
 )
 
@@ -51,6 +52,18 @@ class BenefitsAdapter(private val benefits: List<Benefit>) : RecyclerView.Adapte
                 }
             } else {
                 holder.binding.moreInfoButton.visibility = View.GONE
+            }
+
+            if (benefit.faqUrl != null) {
+                holder.binding.faqButton.visibility = View.VISIBLE
+                holder.binding.faqButton.setOnClickListener {
+                    val intent = Intent(Intent.ACTION_VIEW).apply {
+                        data = Uri.parse(benefit.faqUrl)
+                    }
+                    ContextCompat.startActivity(holder.itemView.context, intent, null)
+                }
+            } else {
+                holder.binding.faqButton.visibility = View.GONE
             }
         } else {
             holder.binding.benefitDetailsLayout.visibility = View.GONE
