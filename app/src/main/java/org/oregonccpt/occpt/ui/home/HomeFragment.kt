@@ -63,6 +63,11 @@ class HomeFragment : Fragment() {
             startActivity(intent)
         }
 
+        binding.unionlyButton.setOnClickListener {
+            val url = "https://unionly.io/o/oregon-afscme-ccpt-local-132/store/products"
+            startActivity(Intent(Intent.ACTION_VIEW, url.toUri()))
+        }
+
         binding.ourUnionContainer.setOnClickListener {
             if (binding.ourUnionExpandableLayout.visibility == View.GONE) {
                 binding.ourUnionExpandableLayout.visibility = View.VISIBLE
