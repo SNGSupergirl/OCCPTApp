@@ -19,10 +19,10 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:src="@drawable/join_our_union_header"
-                android:scaleType="centerCrop"
                 android:adjustViewBounds="true"
-                android:contentDescription="@string/join_afscme_title"/>
+                android:contentDescription="@string/join_afscme_title"
+                android:scaleType="centerCrop"
+                android:src="@drawable/home_2019_december_mtg_training" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -32,26 +32,29 @@
                 android:padding="16dp">
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="397dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:gravity="center"
+                    android:shadowColor="#1A1919"
+                    android:shadowRadius="2"
                     android:text="@string/join_afscme_title"
                     android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-                    android:gravity="center"
-                    android:layout_marginBottom="8dp"
-                    android:textSize="24sp"
-                    android:textStyle="bold"
-                    android:textColor="@android:color/white"/>
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/join_afscme_subtitle"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                    android:gravity="center"
-                    android:layout_marginBottom="16dp"
-                    android:textColor="@android:color/white"/>
             </LinearLayout>
         </RelativeLayout>
+
+        <TextView
+            android:layout_width="388dp"
+            android:layout_height="63dp"
+            android:layout_marginBottom="16dp"
+            android:gravity="center"
+            android:text="@string/join_afscme_subtitle"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/black" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -82,14 +85,6 @@
                 android:layout_height="wrap_content"
                 android:text="@string/join_afscme_button_2"
                 android:layout_marginBottom="24dp"/>
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:layout_marginBottom="24dp"
-                android:contentDescription="@null"
-                android:scaleType="centerCrop"
-                android:src="@drawable/join_our_union" />
 
             <TextView
                 android:layout_width="wrap_content"

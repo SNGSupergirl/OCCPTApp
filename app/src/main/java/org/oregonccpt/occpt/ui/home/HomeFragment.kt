@@ -63,6 +63,16 @@ class HomeFragment : Fragment() {
             startActivity(intent)
         }
 
+        binding.ourUnionContainer.setOnClickListener {
+            if (binding.ourUnionExpandableLayout.visibility == View.GONE) {
+                binding.ourUnionExpandableLayout.visibility = View.VISIBLE
+                binding.clickMoreInfoLayout.visibility = View.INVISIBLE
+            } else {
+                binding.ourUnionExpandableLayout.visibility = View.GONE
+                binding.clickMoreInfoLayout.visibility = View.VISIBLE
+            }
+        }
+
         return binding.root
     }
 
