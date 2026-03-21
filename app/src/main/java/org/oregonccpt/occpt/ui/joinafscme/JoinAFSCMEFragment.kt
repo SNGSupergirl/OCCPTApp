@@ -33,10 +33,6 @@ class JoinAFSCMEFragment : Fragment() {
         binding.joinButton2.setOnClickListener {
             startActivity(browserIntent)
         }
-        binding.privacyPolicyLink.setOnClickListener {
-            val url = "https://findunionchildcareor.org/privacy-policy"
-            startActivity(Intent(Intent.ACTION_VIEW, url.toUri()))
-        }
 
         val membersGetBodyText = getString(R.string.join_afscme_members_get_body)
         binding.membersGetBody.text = HtmlCompat.fromHtml(membersGetBodyText, HtmlCompat.FROM_HTML_MODE_LEGACY)
