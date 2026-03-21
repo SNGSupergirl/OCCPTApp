@@ -74,4 +74,26 @@
         android:label="@string/benefits_title"
         tools:layout="@layout/fragment_benefits" />
 
+    <fragment
+        android:id="@+id/nav_privacy_policy"
+        android:name="org.oregonccpt.occpt.ui.privacy.PrivacyPolicyFragment"
+        android:label="@string/privacy_policy_title"
+        tools:layout="@layout/fragment_privacy_policy">
+        <argument
+            android:name="isSpanish"
+            android:defaultValue="false"
+            app:argType="boolean" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_privacy_policy_spanish"
+        android:name="org.oregonccpt.occpt.ui.privacy.PrivacyPolicyFragment"
+        android:label="@string/privacy_policy_spanish_title"
+        tools:layout="@layout/fragment_privacy_policy">
+        <argument
+            android:name="isSpanish"
+            android:defaultValue="true"
+            app:argType="boolean" />
+    </fragment>
+
 </navigation>

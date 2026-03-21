@@ -4,4 +4,12 @@
         android:id="@+id/nav_settings"
         android:icon="@drawable/ic_settings_black_24dp"
         android:title="@string/menu_settings" />
+    <item
+        android:id="@+id/nav_privacy_policy"
+        android:icon="@drawable/ic_info_black_24dp"
+        android:title="@string/privacy_policy_title" />
+    <item
+        android:id="@+id/nav_privacy_policy_spanish"
+        android:icon="@drawable/ic_info_black_24dp"
+        android:title="@string/privacy_policy_spanish_title" />
 </menu>

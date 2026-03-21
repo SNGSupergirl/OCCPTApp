@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="privacy_policy_title">Privacy Policy</string>
+    <string name="privacy_policy_text"><![CDATA[
+        Oregon Child Care Providers Together (Oregon CCPT) is committed to protecting your personal data. This Privacy Policy outlines our procedures regarding the information gathered during your use of our application and when you sign up for updates or an account.<br><br>
+        <b>Personal Information</b><br>
+        Oregon Child Care Providers Together (Oregon CCPT) maintains a strict policy against selling, renting, or distributing your personal data, such as your email address, to third parties for their marketing needs unless you have given us explicit consent. Your personal information is only shared by Oregon CCPT when necessary to facilitate our email communications with you or to comply with legal obligations.<br><br>
+        <b>Usage Information</b><br>
+        Oregon CCPT also gathers non-identifiable, cumulative data regarding website activity. This information cannot be traced back to individual users and is utilized exclusively to analyze general site usage patterns. By tracking metrics such as the duration of visits, referral sources, and exit links, we are able to better understand our audience and ensure our technical infrastructure can accommodate varying levels of traffic.<br><br>
+        <b>User Account Information</b><br><br>
+        When you create a personal account or register your facility with Oregon CCPT, we collect the information necessary to provide you with a personalized experience. This includes details such as your name, email, address, birthday (month/day), facility name, facility address, professional credentials, and contact preferences.<br><br>
+        &#8226; We use your account data to share with those looking for childcare, ensuring families can find your facility and view your current openings in real-time.<br>
+        &#8226; <b>Google\'s Role:</b> Your data is processed through Google Services (Sheets/Forms), which have their own high-level security standards.<br>
+        &#8226; <b>Control:</b> You are always in the driver’s seat. You have the right to access, update, or delete your account information at any time through your profile settings. We store this data on our restricted, secure servers to ensure your \"digital doorstep\" stays safe and private.<br><br>
+        <b>Review and Access</b><br>
+        If you request it, we can supply a breakdown of the data we have gathered concerning you. Furthermore, you will be permitted to amend, refresh, or change this data as needed.<br><br>
+        <b>Links to Other Sites</b><br>
+        Oregon CCPT may provide links to third-party websites as part of our service. We do not endorse and are not responsible for the content found on these external sites. We recommend reviewing the specific privacy policies of those websites to understand how they manage user information.<br><br>
+        <b>Tracking</b><br>
+        Oregon CCPT utilizes \"cookies,\" which are small text files our server places on your mobile device\'s hard drive, similar to most other applications. These cookies are never used by Oregon CCPT to access information from your device that is not related to our services or app. Additionally, Oregon CCPT may employ transparent GIF images to monitor the emails we distribute.<br><br>
+        <b>Choice/Opt-Out</b><br>
+        Should we provide you with any electronic correspondence that was not specifically requested, an opt-out mechanism will be included to ensure you can decline any further notifications.<br><br>
+        <b>Security</b><br>
+        Restricted database servers are utilized to store all the information mentioned previously.<br><br>
+        <b>Modification to this Policy</b><br>
+        Any updates to this policy by Oregon Child Care Providers Together (Oregon CCPT) will be published on this page, and we encourage you to revisit it for future updates.
+    ]]></string>
+
+    <string name="privacy_policy_spanish_title">Política de Privacidad</string>
+    <string name="privacy_policy_spanish_text"><![CDATA[
+        Oregon Child Care Providers Together (Oregon CCPT) se compromete a proteger sus datos personales. Esta Política de Privacidad describe nuestros procedimientos con respecto a la información recopilada durante el uso de nuestra aplicación y cuando se registra para recibir actualizaciones o crear una cuenta.<br><br>
+        <b>Información Personal</b><br>
+        Oregon Child Care Providers Together (Oregon CCPT) mantiene una política estricta contra la venta, alquiler o distribución de sus datos personales, como su dirección de correo electrónico, a terceros para sus necesidades de marketing a menos que nos haya dado su consentimiento explícito. Su información personal solo es compartida por Oregon CCPT cuando es necesario para facilitar nuestras comunicaciones por correo electrónico con usted o para cumplir con obligaciones legales.<br><br>
+        <b>Información de Uso</b><br>
+        Oregon CCPT también recopila datos acumulativos y no identificables sobre la actividad del sitio web. Esta información no se puede rastrear a usuarios individuales y se utiliza exclusivamente para analizar patrones generales de uso del sitio. Al rastrear métricas como la duración de las visitas, las fuentes de referencia y los enlaces de salida, podemos comprender mejor a nuestra audiencia y asegurar que nuestra infraestructura técnica pueda acomodar diferentes niveles de tráfico.<br><br>
+        <b>Información de la Cuenta de Usuario</b><br><br>
+        Cuando crea una cuenta personal o registra su centro con Oregon CCPT, recopilamos la información necesaria para brindarle una experiencia personalizada. Esto incluye detalles como su nombre, correo electrónico, dirección, fecha de nacimiento (mes/día), nombre del centro, dirección del centro, credenciales profesionales y preferencias de contacto.<br><br>
+        &#8226; Utilizamos los datos de su cuenta para compartirlos con quienes buscan cuidado infantil, asegurando que las familias puedan encontrar su centro y ver sus vacantes actuales en tiempo real.<br>
+        &#8226; <b>El papel de Google:</b> Sus datos se procesan a través de los Servicios de Google (Hojas de cálculo/Formularios), que cuentan con sus propios estándares de seguridad de alto nivel.<br>
+        &#8226; <b>Control:</b> Usted siempre tiene el control. Tiene derecho a acceder, actualizar o eliminar la información de su cuenta en cualquier momento a través de la configuración de su perfil. Almacenamos estos datos en nuestros servidores seguros y restringidos para garantizar que su \"puerta digital\" permanezca segura y privada.<br><br>
+        <b>Revisión y Acceso</b><br>
+        Si lo solicita, podemos proporcionar un desglose de los datos que hemos recopilado sobre usted. Además, se le permitirá modificar, actualizar o cambiar estos datos según sea necesario.<br><br>
+        <b>Enlaces a Otros Sitios</b><br>
+        Oregon CCPT puede proporcionar enlaces a sitios web de terceros como parte de nuestro servicio. No respaldamos ni somos responsables del contenido que se encuentra en estos sitios externos. Recomendamos revisar las políticas de privacidad específicas de esos sitios web para comprender cómo gestionan la información del usuario.<br><br>
+        <b>Seguimiento</b><br>
+        Oregon CCPT utiliza \"cookies\", que son pequeños archivos de texto que nuestro servidor coloca en el disco duro de su dispositivo móvil, de manera similar a la mayoría de las otras aplicaciones. Oregon CCPT nunca utiliza estas cookies para acceder a información de su dispositivo que no esté relacionada con nuestros servicios o aplicación. Además, Oregon CCPT puede emplear imágenes GIF transparentes para monitorear los correos electrónicos que distribuimos.<br><br>
+        <b>Opción/Exclusión Voluntaria</b><br>
+        En caso de que le proporcionemos cualquier correspondencia electrónica que no haya sido solicitada específicamente, se incluirá un mecanismo de exclusión voluntaria para garantizar que pueda rechazar futuras notificaciones.<br><br>
+        <b>Seguridad</b><br>
+        Se utilizan servidores de bases de datos restringidas para almacenar toda la información mencionada anteriormente.<br><br>
+        <b>Modificación de esta Política</b><br>
+        Cualquier actualización a esta política por parte de Oregon Child Care Providers Together (Oregon CCPT) se publicará en esta página, y le recomendamos que la revise para futuras actualizaciones.
+    ]]></string>
+</resources>
