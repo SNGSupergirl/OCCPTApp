@@ -18,7 +18,7 @@
             android:title="@string/menu_resources" />
         <item
             android:id="@+id/nav_join_afscme"
-            android:icon="@drawable/ic_benefits"
+            android:icon="@drawable/logo_small"
             android:title="@string/menu_join_afscme" />
         <item
             android:id="@+id/nav_benefits"
