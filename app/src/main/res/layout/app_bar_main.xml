@@ -26,7 +26,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="start"
                 android:contentDescription="@string/logo_description"
-                android:src="@drawable/logo_home" />
+                android:src="@drawable/pillars_top_logo" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -52,13 +52,13 @@
 
         <TextView
             android:id="@+id/textView2"
-            android:layout_width="333dp"
-            android:layout_marginStart="12dp"
+            android:layout_width="185dp"
             android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
             android:fontFamily="@font/chilanka"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:text="@string/afscme_local_132" />
+            android:text="@string/afscme_local_132"
+            android:textSize="14sp"
+            android:textStyle="bold" />
 
     </com.google.android.material.appbar.AppBarLayout>
 
