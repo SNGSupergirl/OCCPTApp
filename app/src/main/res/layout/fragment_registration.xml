@@ -281,11 +281,11 @@
                 app:layout_constraintStart_toStartOf="parent"/>
 
             <CheckBox
-                android:id="@+id/unionMemberCheckbox"
+                android:id="@+id/pillarsMemberCheckbox"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:text="@string/registration_union_member"
+                android:text="@string/registration_pillars_member"
                 app:layout_constraintTop_toBottomOf="@id/roles_title"
                 app:layout_constraintStart_toStartOf="parent"/>
 
@@ -295,7 +295,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:text="@string/registration_parent"
-                app:layout_constraintTop_toBottomOf="@id/unionMemberCheckbox"
+                app:layout_constraintTop_toBottomOf="@id/pillarsMemberCheckbox"
                 app:layout_constraintStart_toStartOf="parent"/>
 
             <CheckBox

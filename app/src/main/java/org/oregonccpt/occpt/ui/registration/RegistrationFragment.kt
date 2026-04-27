@@ -77,7 +77,7 @@ class RegistrationFragment : Fragment() {
             val confirmEmail = binding.confirmEmailEditText.text.toString().trim()
             val emailView = if (binding.emailViewCheckbox.isChecked) "Yes" else "No"
             val emailList = if (binding.emailListCheckbox.isChecked) "Yes" else "No"
-            val unionMember = if (binding.unionMemberCheckbox.isChecked) "Yes" else "No"
+            val pillarsMember = if (binding.pillarsMemberCheckbox.isChecked) "Yes" else "No"
             val parent = if (binding.parentCheckbox.isChecked) "Yes" else "No"
             val registeredProvider = if (binding.registeredProviderCheckbox.isChecked) "Yes" else "No"
             val certifiedProvider = if (binding.certifiedProviderCheckbox.isChecked) "Yes" else "No"
@@ -89,7 +89,7 @@ class RegistrationFragment : Fragment() {
             val isAnyFieldEmpty = firstName.isEmpty() || lastName.isEmpty() || address.isEmpty() || city.isEmpty() || postalCode.isEmpty() || county.isEmpty() || country.isEmpty() ||
                 phone.isEmpty() || phoneProvider.isEmpty() || email.isEmpty() || confirmEmail.isEmpty() || username.isEmpty() || password.isEmpty()
 
-            val isRoleSelected = binding.unionMemberCheckbox.isChecked ||
+            val isRoleSelected = binding.pillarsMemberCheckbox.isChecked ||
                     binding.parentCheckbox.isChecked ||
                     binding.registeredProviderCheckbox.isChecked ||
                     binding.certifiedProviderCheckbox.isChecked ||
