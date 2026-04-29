@@ -1,4 +1,4 @@
-package org.oregonccpt.occpt
+package org.pillarsoforegon.pillarsapp
 
 import org.junit.Test
 

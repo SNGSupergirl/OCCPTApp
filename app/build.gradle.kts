@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "org.oregonccpt.occpt"
+    namespace = "org.pillarsoforegon.pillarsapp"
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "org.oregonccpt.occpt"
+        applicationId = "org.pillarsoforegon.pillarsapp"
         minSdk = 35
         targetSdk = 35
         versionCode = 1
@@ -50,7 +50,7 @@ dependencies {
     implementation(libs.androidx.navigation.fragment.ktx)
     implementation(libs.androidx.navigation.ui.ktx)
     implementation(libs.circleimageview)
-    implementation("io.coil-kt:coil:2.5.0")
+    implementation("io.coil-kt:coil:2.7.0")
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

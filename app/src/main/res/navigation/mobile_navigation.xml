@@ -7,17 +7,17 @@
 
     <fragment
         android:id="@+id/nav_login"
-        android:name="org.oregonccpt.occpt.ui.login.LoginFragment"
+        android:name="org.pillarsoforegon.pillarsapp.ui.login.LoginFragment"
         android:label="@string/menu_login"
         tools:layout="@layout/fragment_login" />
     <fragment
         android:id="@+id/nav_registration"
-        android:name="org.oregonccpt.occpt.ui.registration.RegistrationFragment"
+        android:name="org.pillarsoforegon.pillarsapp.ui.registration.RegistrationFragment"
         android:label="@string/menu_login"
         tools:layout="@layout/fragment_registration" />
     <fragment
         android:id="@+id/loginFragment"
-        android:name="org.oregonccpt.occpt.ui.login.LoginFragment"
+        android:name="org.pillarsoforegon.pillarsapp.ui.login.LoginFragment"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" />
     <action
@@ -25,12 +25,12 @@
         app:destination="@id/registrationFragment" />
     <fragment
         android:id="@+id/registrationFragment"
-        android:name="org.oregonccpt.occpt.ui.registration.RegistrationFragment"
+        android:name="org.pillarsoforegon.pillarsapp.ui.registration.RegistrationFragment"
         android:label="fragment_registration"
         tools:layout="@layout/fragment_registration" />
     <fragment
         android:id="@+id/nav_home"
-        android:name="org.oregonccpt.occpt.ui.home.HomeFragment"
+        android:name="org.pillarsoforegon.pillarsapp.ui.home.HomeFragment"
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_home">
         <action
@@ -40,43 +40,43 @@
 
     <fragment
         android:id="@+id/nav_about"
-        android:name="org.oregonccpt.occpt.ui.about.AboutFragment"
+        android:name="org.pillarsoforegon.pillarsapp.ui.about.AboutFragment"
         android:label="@string/menu_about"
         tools:layout="@layout/fragment_about" />
 
     <fragment
         android:id="@+id/nav_find_child_care"
-        android:name="org.oregonccpt.occpt.ui.ourstaff.OurStaffFragment"
+        android:name="org.pillarsoforegon.pillarsapp.ui.ourstaff.OurStaffFragment"
         android:label="@string/menu_find_child_care"
         tools:layout="@layout/fragment_find_child_care" />
 
     <fragment
         android:id="@+id/nav_resources"
-        android:name="org.oregonccpt.occpt.ui.resources.ResourcesFragment"
+        android:name="org.pillarsoforegon.pillarsapp.ui.resources.ResourcesFragment"
         android:label="@string/menu_resources"
         tools:layout="@layout/fragment_resources" />
 
     <fragment
         android:id="@+id/nav_join_afscme"
-        android:name="org.oregonccpt.occpt.ui.joinafscme.JoinAFSCMEFragment"
+        android:name="org.pillarsoforegon.pillarsapp.ui.joinafscme.JoinAFSCMEFragment"
         android:label="@string/menu_education"
         tools:layout="@layout/fragment_join_afscme" />
 
     <fragment
         android:id="@+id/nav_officers"
-        android:name="org.oregonccpt.occpt.ui.officers.OfficersFragment"
+        android:name="org.pillarsoforegon.pillarsapp.ui.officers.OfficersFragment"
         android:label="@string/our_officers_staff_title"
         tools:layout="@layout/fragment_officers" />
 
     <fragment
         android:id="@+id/nav_benefits"
-        android:name="org.oregonccpt.occpt.ui.benefits.BenefitsFragment"
+        android:name="org.pillarsoforegon.pillarsapp.ui.benefits.BenefitsFragment"
         android:label="@string/benefits_title"
         tools:layout="@layout/fragment_benefits" />
 
     <fragment
         android:id="@+id/nav_privacy_policy"
-        android:name="org.oregonccpt.occpt.ui.privacy.PrivacyPolicyFragment"
+        android:name="org.pillarsoforegon.pillarsapp.ui.privacy.PrivacyPolicyFragment"
         android:label="@string/privacy_policy_title"
         tools:layout="@layout/fragment_privacy_policy">
         <argument
@@ -87,7 +87,7 @@
 
     <fragment
         android:id="@+id/nav_privacy_policy_spanish"
-        android:name="org.oregonccpt.occpt.ui.privacy.PrivacyPolicyFragment"
+        android:name="org.pillarsoforegon.pillarsapp.ui.privacy.PrivacyPolicyFragment"
         android:label="@string/privacy_policy_spanish_title"
         tools:layout="@layout/fragment_privacy_policy">
         <argument

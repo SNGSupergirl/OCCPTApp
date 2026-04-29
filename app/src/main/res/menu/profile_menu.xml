@@ -7,6 +7,9 @@
         android:id="@+id/action_register"
         android:title="Register" />
     <item
+        android:id="@+id/action_settings"
+        android:title="@string/menu_settings" />
+    <item
         android:id="@+id/action_privacy_policy"
         android:title="@string/privacy_policy_title" />
     <item

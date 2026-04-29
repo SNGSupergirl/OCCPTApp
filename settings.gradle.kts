@@ -22,6 +22,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "OCCPT"
+rootProject.name = "PILLARSAPP"
 include(":app")
  
