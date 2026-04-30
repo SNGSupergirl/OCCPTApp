@@ -63,27 +63,27 @@
     <string name="email_officer_content_description">Email officer</string>
     <string name="add_officer_contact_content_description">Add officer to contacts</string>
 
-    <string name="join_afscme_title">BECOME A UNION CHILD CARE PROVIDER</string>
+    <string name="join_afscme_title">HAVING A GREAT SUPPORT TEAM MAKES ALL THE DIFFERENCE</string>
     <string name="join_afscme_subtitle">Learn more about how being part of Oregon Child Care Providers Together can help you and the families you care for. </string>
     <string name="join_afscme_button_1">REGISTERED FAMILY &amp; CERTIFIED FAMILY LICENSED PROVIDERS\nJOIN OUR UNION</string>
     <string name="join_afscme_members_get_title">HERE\'S WHAT MEMBERS GET:</string>
-    <string name="join_afscme_members_get_body"><![CDATA[Promotion of your childcare program to those looking for high-quality in-home care.<br><br>• Voice to improve the licensed exempt family child care profession over the state of Oregon.<br>• Free trainings you can do at home, or later to grow your program, see your professional education to yourself.<br>• <a href="https://www.afscme.org/college">Access to a free college program</a> to credentialize for you and your partners.<br>• Free course Register of competence in serving a family child care program.<br>• Free and discounted services such as <a href="https://shieldbenefits.com/oregonafscme/overview">legal services</a>, accidental insurance, and <a href="https://partner.healthiestyou.com/view/s.aspx?id=5771555d309f920d3cff1476">health services</a>, and much <a href="https://www.afscme.org/member-resources/afscme-advantage">more</a>.<br>• Union representation wrestling with you for your rights.]]></string>
+    <string name="join_afscme_members_get_body"><![CDATA[Promotion of your childcare program to those looking for high-quality in-home care.<br><br>• Access to trainings and support to find the ones you need.<br>• Representation wrestling with you for your rights.<br>• MORE COMING SOON!]]></string>
     <string name="join_afscme_button_2">LOCAL PROVIDERS - BECOME A MEMBER</string>
-    <string name="join_afscme_testimonial_1_quote">"When you are a provider, it is easy to feel alone, we don\'t know who to trust or turn to for help. With our union, we have each other\'s backs and a community we can count on. It has been so helpful to have that support system that we can rely on for help and we know they have our interests at heart."</string>
-    <string name="join_afscme_testimonial_1_name">- A &amp; R Family Care</string>
-    <string name="join_afscme_testimonial_2_quote">"The union has created a space for us to learn, grow, and stay connected to other providers. We are no longer working in isolation but as a united group, working to make things better for providers, kids, and families in our communities. I have grown so much as a provider and a person thanks to our union!"</string>
-    <string name="join_afscme_testimonial_2_name">- Maria Belen C. Owner/Provider</string>
-    <string name="join_afscme_testimonial_3_quote">"I am Registered Family provider who also care for my own children with autism. As a member of Oregon Child Care Providers Together because it is single-handedly what is making the profession more professional and with our union behind me, I get paid for the recognizes the importance of the hard work I put into my child care business."</string>
-    <string name="join_afscme_testimonial_3_name">- Anne-Marie L.</string>
+    <string name="join_afscme_testimonial_1_quote">""</string>
+    <string name="join_afscme_testimonial_1_name">"</string>
+    <string name="join_afscme_testimonial_2_quote">""</string>
+    <string name="join_afscme_testimonial_2_name">"</string>
+    <string name="join_afscme_testimonial_3_quote">""</string>
+    <string name="join_afscme_testimonial_3_name">"</string>
     <string name="contact_banner_text">BUILDING THE FOUNDATION FOR CHILDCARE EXCELLENCE</string>
     <string name="contact_update_info_text">Keep your information current in our public child care provider directory.</string>
     <string name="contact_update_info_button">Update My Information</string>
     <string name="contact_resources_title">RESOURCES FOR MEMBERS ONLY</string>
-    <string name="contact_resources_text">• Sign up for <![CDATA[<a href="https://www.afscme.org/member-resources/free-trainings">free trainings</a>]]> you can do at home on how to grow your program, run your business and advocate for yourself\n• Access to <![CDATA[<a href="https://www.afscme.org/member-resources/scholarships">scholarship funds</a>]]> for professional development including college courses\n• Connect with <![CDATA[<a href="https://www.afscme.org/member-resources/afscme-advantage">free and discounted services</a>]]>\n• Your <![CDATA[<a href="https://www.afscme.org/about/governance/constitution/bill-of-rights-for-members">Provider Bill of Rights</a>]]></string>
-    <string name="contact_share_text">Know other providers who should join AFSCME? SHARE this page with your Facebook friends.</string>
+    <string name="contact_resources_text">• Sign up for <![CDATA[<a href="https://www.pillarsoforegon.org/resources/free-trainings">free trainings</a>]]> you can do at home on how to grow your program, run your business and advocate for yourself\n• Check out <![CDATA[<a href="https://www.pdx.edu/education-career-development/scholarships">scholarship funds</a>]]> for professional development including college courses\n• Your <![CDATA[<a href="https://www.afscme.org/about/governance/constitution/bill-of-rights-for-members">Provider Bill of Rights</a>]]></string>
+    <string name="contact_share_text">Know other providers who would want to join PILLARS? SHARE this page with your Facebook friends.</string>
     <string name="contact_share_button">Share</string>
     <string name="contact_questions_title">HAVE QUESTIONS?</string>
-    <string name="contact_questions_text">Visit our local’s website: <![CDATA[<a href="http://oregonccpt.com/">http://oregonccpt.com/</a>]]>\n\nWe have people available to answer any questions you may have about your union membership. Contact our Member Services Center at 1-844-758-6466 or <![CDATA[<a href="mailto:MSC@oregonafscme.org">MSC@oregonafscme.org</a>]]></string>
+    <string name="contact_questions_text">Visit our website: <![CDATA[<a href="http://www.pillarsoforegon.org">http://www.pillarsoforegon.org/</a>]]>\n\nWe are available to answer any questions you have about us or your membership. Email us at <![CDATA[<a href="mailto:PILLARSofOregon@gmail.com">PILLARSofOregon@gmail.com</a>]]></string>
     <string name="facebook_icon_description">Facebook</string>
     <string name="twitter_icon_description">Twitter</string>
     <string name="resources_fragment">Resources Fragment</string>

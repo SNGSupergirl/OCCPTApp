@@ -20,9 +20,5 @@
             android:id="@+id/nav_join_afscme"
             android:icon="@drawable/logo_small"
             android:title="@string/menu_join_afscme" />
-        <item
-            android:id="@+id/nav_benefits"
-            android:icon="@drawable/ic_benefits"
-            android:title="@string/menu_benefits" />
     </group>
 </menu>

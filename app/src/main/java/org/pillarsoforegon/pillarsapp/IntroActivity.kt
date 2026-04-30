@@ -4,7 +4,6 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.net.toUri
-import org.pillarsoforegon.pillarsapp.MainActivity
 import org.pillarsoforegon.pillarsapp.databinding.ActivityIntroBinding
 
 class IntroActivity : AppCompatActivity() {
@@ -21,10 +20,18 @@ class IntroActivity : AppCompatActivity() {
         videoView.setVideoURI(videoUri)
 
         videoView.setOnCompletionListener {
-            startActivity(Intent(this, MainActivity::class.java))
-            finish()
+            navigateToMain()
+        }
+
+        binding.root.setOnClickListener {
+            navigateToMain()
         }
 
         videoView.start()
+    }
+
+    private fun navigateToMain() {
+        startActivity(Intent(this, MainActivity::class.java))
+        finish()
     }
 }

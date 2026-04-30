@@ -10,11 +10,11 @@ import androidx.core.net.toUri
 import androidx.core.text.HtmlCompat
 import androidx.fragment.app.Fragment
 import org.pillarsoforegon.pillarsapp.R
-import org.pillarsoforegon.pillarsapp.databinding.FragmentJoinAfscmeBinding
+import org.pillarsoforegon.pillarsapp.databinding.FragmentJoinPillarsBinding
 
-class JoinAFSCMEFragment : Fragment() {
+class JoinPILLARSFragment : Fragment() {
 
-    private var _binding: FragmentJoinAfscmeBinding? = null
+    private var _binding: FragmentJoinPillarsBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -22,13 +22,13 @@ class JoinAFSCMEFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentJoinAfscmeBinding.inflate(inflater, container, false)
+        _binding = FragmentJoinPillarsBinding.inflate(inflater, container, false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val browserIntent = Intent(Intent.ACTION_VIEW, "https://findunionchildcareor.org/sign-up-page".toUri())
+        val browserIntent = Intent(Intent.ACTION_VIEW, "https://www.pillarsoforegon.org/become-a-member".toUri())
 
         binding.joinButton2.setOnClickListener {
             startActivity(browserIntent)
