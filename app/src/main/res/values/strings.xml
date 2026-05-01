@@ -125,6 +125,7 @@
     <string name="registration_password_strength_hint">Password Strength:\n\nStrong passwords contain 3 of the following items and at least 6 characters:\n\n- Uppercase Letters\n- Lowercase Letters\n- Numbers\n- Symbols</string>
 
     <string name="welcome_provider">Welcome, Provider!</string>
+    <string name="welcome_user">Welcome, %s!</string>
     <string name="afscme_local_132">P.I.L.L.A.R.S. of Oregon</string>
     <string name="our_union">Our Mission</string>
     <string name="our_union_body">Providing childcare providers with the tools they need to thrive. At P.I.L.L.A.R.S., we offer specialized classes, professional development training, and essential resources designed for the modern educator. From leadership growth to hands-on assistance, we are here to support your journey in early childhood education.</string>

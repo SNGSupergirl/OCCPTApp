@@ -4,31 +4,41 @@ import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.view.Menu
-import android.view.MenuItem
 import android.widget.PopupMenu
-import com.google.android.material.navigation.NavigationView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
-import androidx.appcompat.app.AppCompatActivity
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ValueEventListener
 import org.pillarsoforegon.pillarsapp.databinding.ActivityMainBinding
-
+import org.pillarsoforegon.pillarsapp.ui.registration.User
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityMainBinding
-    private var isLoggedIn = false
+    private lateinit var auth: FirebaseAuth
+    private lateinit var database: FirebaseDatabase
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         setSupportActionBar(binding.appBarMain.toolbar)
-        supportActionBar?.setDisplayShowTitleEnabled(false) 
+        supportActionBar?.setDisplayShowTitleEnabled(false)
+
+        auth = FirebaseAuth.getInstance()
+        database = FirebaseDatabase.getInstance()
+
+        setupNavigation()
+        setupUserObserver()
 
         binding.appBarMain.fab.setOnClickListener {
             val intent = Intent(Intent.ACTION_SENDTO).apply {
@@ -37,6 +47,12 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        binding.appBarMain.mainMenuIcon?.setOnClickListener {
+            showPopupMenu(it)
+        }
+    }
+
+    private fun setupNavigation() {
         val navHostFragment =
             (supportFragmentManager.findFragmentById(R.id.nav_host_fragment_content_main) as NavHostFragment?)!!
         val navController = navHostFragment.navController
@@ -61,62 +77,76 @@ class MainActivity : AppCompatActivity() {
             setupActionBarWithNavController(navController, appBarConfiguration)
             it.setupWithNavController(navController)
         }
+    }
 
-        binding.appBarMain.mainMenuIcon?.setOnClickListener {
-            val popupMenu = PopupMenu(this, it)
-            if (isLoggedIn) {
-                popupMenu.menuInflater.inflate(R.menu.profile_menu_logged_in, popupMenu.menu)
-            } else {
-                popupMenu.menuInflater.inflate(R.menu.profile_menu, popupMenu.menu)
-            }
-
-            popupMenu.setOnMenuItemClickListener { menuItem ->
-                when (menuItem.itemId) {
-                    R.id.action_login -> {
-                        navController.navigate(R.id.nav_login)
-                        true
-                    }
-
-                    R.id.action_register -> {
-                        navController.navigate(R.id.nav_registration)
-                        true
-                    }
-
-                    R.id.action_settings -> {
-                        // Navigate to settings fragment if it exists, or show a message
-                        try {
-                            navController.navigate(R.id.nav_settings)
-                        } catch (e: Exception) {
-                            // Handle if nav_settings doesn't exist in graph
+    private fun setupUserObserver() {
+        auth.addAuthStateListener { firebaseAuth ->
+            val currentUser = firebaseAuth.currentUser
+            if (currentUser != null) {
+                database.getReference("users").child(currentUser.uid)
+                    .addValueEventListener(object : ValueEventListener {
+                        override fun onDataChange(snapshot: DataSnapshot) {
+                            val user = snapshot.getValue(User::class.java)
+                            if (user != null && user.firstName.isNotEmpty()) {
+                                binding.appBarMain.welcomeText.text = getString(R.string.welcome_user, user.firstName)
+                            } else {
+                                binding.appBarMain.welcomeText.text = getString(R.string.welcome_provider)
+                            }
                         }
-                        true
-                    }
 
-                    R.id.action_logout -> {
-                        isLoggedIn = false
-                        // Handle logout logic
-                        true
-                    }
-
-                    R.id.action_privacy_policy -> {
-                        navController.navigate(R.id.nav_privacy_policy)
-                        true
-                    }
-
-                    R.id.action_privacy_policy_spanish -> {
-                        navController.navigate(R.id.nav_privacy_policy_spanish)
-                        true
-                    }
-
-                    else -> false
-                }
+                        override fun onCancelled(error: DatabaseError) {
+                            binding.appBarMain.welcomeText.text = getString(R.string.welcome_provider)
+                        }
+                    })
+            } else {
+                binding.appBarMain.welcomeText.text = getString(R.string.welcome_provider)
             }
-            popupMenu.show()
         }
     }
 
+    private fun showPopupMenu(view: android.view.View) {
+        val navController = findNavController(R.id.nav_host_fragment_content_main)
+        val popupMenu = PopupMenu(this, view)
+        val currentUser = auth.currentUser
+        
+        if (currentUser != null) {
+            popupMenu.menuInflater.inflate(R.menu.profile_menu_logged_in, popupMenu.menu)
+        } else {
+            popupMenu.menuInflater.inflate(R.menu.profile_menu, popupMenu.menu)
+        }
+
+        popupMenu.setOnMenuItemClickListener { menuItem ->
+            when (menuItem.itemId) {
+                R.id.action_login -> {
+                    navController.navigate(R.id.nav_login)
+                    true
+                }
+                R.id.action_register -> {
+                    navController.navigate(R.id.nav_registration)
+                    true
+                }
+                R.id.action_settings -> {
+                    try {
+                        navController.navigate(R.id.nav_settings)
+                    } catch (e: Exception) {}
+                    true
+                }
+                R.id.action_logout -> {
+                    auth.signOut()
+                    true
+                }
+                R.id.action_privacy_policy -> {
+                    navController.navigate(R.id.nav_privacy_policy)
+                    true
+                }
+                else -> false
+            }
+        }
+        popupMenu.show()
+    }
+
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        return false // Disable default options menu
+        return false
     }
 
     override fun onSupportNavigateUp(): Boolean {
