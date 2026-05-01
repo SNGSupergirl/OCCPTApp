@@ -10,6 +10,10 @@ import android.widget.ImageView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import com.google.firebase.FirebaseApp
+import com.google.firebase.FirebaseOptions
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.FirebaseDatabase
 import org.pillarsoforegon.pillarsapp.R
 import org.pillarsoforegon.pillarsapp.databinding.FragmentRegistrationBinding
 
@@ -17,6 +21,9 @@ class RegistrationFragment : Fragment() {
 
     private var _binding: FragmentRegistrationBinding? = null
     private val binding get() = _binding!!
+
+    private lateinit var auth: FirebaseAuth
+    private lateinit var database: FirebaseDatabase
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -29,6 +36,8 @@ class RegistrationFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        setupFirebase()
 
         // Populate the state dropdown
         ArrayAdapter.createFromResource(
@@ -54,69 +63,110 @@ class RegistrationFragment : Fragment() {
             binding.phoneProviderDropdown.adapter = adapter
         }
 
-        //binding.countryEditText.setText(getString(R.string.registration_country_default))
-
         binding.avatarLayout.setOnClickListener {
             showEditAvatarOrBorderDialog()
         }
 
         // Handle the register button click
         binding.registerButton.setOnClickListener {
-            val firstName = binding.firstNameEditText.text.toString().trim()
-            val lastName = binding.lastNameEditText.text.toString().trim()
-            val address = binding.addressEditText.text.toString().trim()
-            val city = binding.cityEditText.text.toString().trim()
-            val state = binding.stateDropdown.selectedItem.toString()
-            val postalCode = binding.postalCodeEditText.text.toString().trim()
-            val county = binding.countyEditText.text.toString().trim()
-            val country = binding.countryEditText.text.toString().trim()
-            val phone = binding.phoneEditText.text.toString().trim()
-            val phoneProvider = binding.phoneProviderDropdown.selectedItem.toString()
-            val textAlerts = if (binding.textAlertsCheckbox.isChecked) "Yes" else "No"
-            val email = binding.emailEditText.text.toString().trim()
-            val confirmEmail = binding.confirmEmailEditText.text.toString().trim()
-            val emailView = if (binding.emailViewCheckbox.isChecked) "Yes" else "No"
-            val emailList = if (binding.emailListCheckbox.isChecked) "Yes" else "No"
-            val pillarsMember = if (binding.pillarsMemberCheckbox.isChecked) "Yes" else "No"
-            val parent = if (binding.parentCheckbox.isChecked) "Yes" else "No"
-            val registeredProvider = if (binding.registeredProviderCheckbox.isChecked) "Yes" else "No"
-            val certifiedProvider = if (binding.certifiedProviderCheckbox.isChecked) "Yes" else "No"
-            val certifiedCenter = if (binding.certifiedCenterCheckbox.isChecked) "Yes" else "No"
-            val unlicensedProvider = if (binding.unlicensedProviderCheckbox.isChecked) "Yes" else "No"
-            val username = binding.usernameEditText.text.toString().trim()
-            val password = binding.passwordEditText.text.toString()
-
-            val isAnyFieldEmpty = firstName.isEmpty() || lastName.isEmpty() || address.isEmpty() || city.isEmpty() || postalCode.isEmpty() || county.isEmpty() || country.isEmpty() ||
-                phone.isEmpty() || phoneProvider.isEmpty() || email.isEmpty() || confirmEmail.isEmpty() || username.isEmpty() || password.isEmpty()
-
-            val isRoleSelected = binding.pillarsMemberCheckbox.isChecked ||
-                    binding.parentCheckbox.isChecked ||
-                    binding.registeredProviderCheckbox.isChecked ||
-                    binding.certifiedProviderCheckbox.isChecked ||
-                    binding.certifiedCenterCheckbox.isChecked ||
-                    binding.unlicensedProviderCheckbox.isChecked
-
-            if (binding.phoneProviderDropdown.selectedItemPosition == 0) {
-                Toast.makeText(requireContext(), "Please select your cell phone carrier", Toast.LENGTH_SHORT).show()
-            } else if (isAnyFieldEmpty) {
-                Toast.makeText(requireContext(), "Please fill out all fields", Toast.LENGTH_SHORT).show()
-            } else if (email != confirmEmail) {
-                Toast.makeText(requireContext(), "Emails do not match", Toast.LENGTH_SHORT).show()
-            } else if (!isRoleSelected) {
-                Toast.makeText(requireContext(), "Please select at least one role (parent, provider, union member)", Toast.LENGTH_SHORT).show()
-            } else {
-                // Perform registration logic here (e.g. call API)
-                Toast.makeText(requireContext(), "Registration submitted for $firstName", Toast.LENGTH_SHORT).show()
-                // Optionally, navigate back to log in after successful registration
-                findNavController().navigateUp()
-            }
+            registerUser()
         }
 
         // Handle click to go back to the login screen
         binding.goToLoginLink.setOnClickListener {
-            // Navigate up (back) in the navigation graph
             findNavController().navigateUp()
         }
+    }
+
+    private fun setupFirebase() {
+        try {
+            if (FirebaseApp.getApps(requireContext()).isEmpty()) {
+                val options = FirebaseOptions.Builder()
+                    .setApiKey("AIzaSyAOotggMrhBYv9l8lyP0IRhjTbsz-oNpf0")
+                    .setApplicationId("1:231241868866:web:3be2ccd0f4c6ac16faafdb")
+                    .setDatabaseUrl("https://pillars-a3fff-default-rtdb.firebaseio.com")
+                    .setProjectId("pillars-a3fff")
+                    .setStorageBucket("pillars-a3fff.firebasestorage.app")
+                    .build()
+                FirebaseApp.initializeApp(requireContext(), options)
+            }
+            auth = FirebaseAuth.getInstance()
+            database = FirebaseDatabase.getInstance()
+        } catch (e: Exception) {
+            Toast.makeText(requireContext(), "Firebase init error: ${e.message}", Toast.LENGTH_LONG).show()
+        }
+    }
+
+    private fun registerUser() {
+        val firstName = binding.firstNameEditText.text.toString().trim()
+        val lastName = binding.lastNameEditText.text.toString().trim()
+        val address = binding.addressEditText.text.toString().trim()
+        val city = binding.cityEditText.text.toString().trim()
+        val state = binding.stateDropdown.selectedItem.toString()
+        val postalCode = binding.postalCodeEditText.text.toString().trim()
+        val county = binding.countyEditText.text.toString().trim()
+        val country = binding.countryEditText.text.toString().trim()
+        val phone = binding.phoneEditText.text.toString().trim()
+        val phoneProvider = binding.phoneProviderDropdown.selectedItem.toString()
+        val textAlerts = if (binding.textAlertsCheckbox.isChecked) "Yes" else "No"
+        val email = binding.emailEditText.text.toString().trim()
+        val confirmEmail = binding.confirmEmailEditText.text.toString().trim()
+        val emailView = if (binding.emailViewCheckbox.isChecked) "Yes" else "No"
+        val emailList = if (binding.emailListCheckbox.isChecked) "Yes" else "No"
+        val pillarsMember = if (binding.pillarsMemberCheckbox.isChecked) "Yes" else "No"
+        val parent = if (binding.parentCheckbox.isChecked) "Yes" else "No"
+        val registeredProvider = if (binding.registeredProviderCheckbox.isChecked) "Yes" else "No"
+        val certifiedProvider = if (binding.certifiedProviderCheckbox.isChecked) "Yes" else "No"
+        val certifiedCenter = if (binding.certifiedCenterCheckbox.isChecked) "Yes" else "No"
+        val unlicensedProvider = if (binding.unlicensedProviderCheckbox.isChecked) "Yes" else "No"
+        val username = binding.usernameEditText.text.toString().trim()
+        val password = binding.passwordEditText.text.toString()
+
+        val isAnyFieldEmpty = firstName.isEmpty() || lastName.isEmpty() || address.isEmpty() || city.isEmpty() || postalCode.isEmpty() || county.isEmpty() || country.isEmpty() ||
+                phone.isEmpty() || email.isEmpty() || confirmEmail.isEmpty() || username.isEmpty() || password.isEmpty()
+
+        if (binding.phoneProviderDropdown.selectedItemPosition == 0) {
+            Toast.makeText(requireContext(), "Please select your cell phone carrier", Toast.LENGTH_SHORT).show()
+            return
+        }
+        if (isAnyFieldEmpty) {
+            Toast.makeText(requireContext(), "Please fill out all fields", Toast.LENGTH_SHORT).show()
+            return
+        }
+        if (email != confirmEmail) {
+            Toast.makeText(requireContext(), "Emails do not match", Toast.LENGTH_SHORT).show()
+            return
+        }
+
+        binding.registerButton.isEnabled = false
+
+        auth.createUserWithEmailAndPassword(email, password)
+            .addOnCompleteListener { task ->
+                if (task.isSuccessful) {
+                    val userId = auth.currentUser?.uid
+                    val user = User(
+                        firstName, lastName, address, city, state, postalCode, county, country,
+                        phone, phoneProvider, textAlerts, email, emailView, emailList,
+                        pillarsMember, parent, registeredProvider, certifiedProvider,
+                        certifiedCenter, unlicensedProvider, username
+                    )
+
+                    if (userId != null) {
+                        database.getReference("users").child(userId).setValue(user)
+                            .addOnSuccessListener {
+                                Toast.makeText(requireContext(), "Registration successful!", Toast.LENGTH_SHORT).show()
+                                findNavController().navigateUp()
+                            }
+                            .addOnFailureListener { e ->
+                                binding.registerButton.isEnabled = true
+                                Toast.makeText(requireContext(), "Database error: ${e.message}", Toast.LENGTH_SHORT).show()
+                            }
+                    }
+                } else {
+                    binding.registerButton.isEnabled = true
+                    Toast.makeText(requireContext(), "Auth error: ${task.exception?.message}", Toast.LENGTH_SHORT).show()
+                }
+            }
     }
 
     private fun showEditAvatarOrBorderDialog() {
@@ -140,44 +190,35 @@ class RegistrationFragment : Fragment() {
 
         val dialog = builder.create()
 
-        val avatar1 = dialogView.findViewById<ImageView>(R.id.avatar_1)
-        val avatar2 = dialogView.findViewById<ImageView>(R.id.avatar_2)
-        val avatar3 = dialogView.findViewById<ImageView>(R.id.avatar_3)
-        val avatar4 = dialogView.findViewById<ImageView>(R.id.avatar_4)
-        val avatar5 = dialogView.findViewById<ImageView>(R.id.avatar_5)
-        val avatar6 = dialogView.findViewById<ImageView>(R.id.avatar_6)
-        val avatar7 = dialogView.findViewById<ImageView>(R.id.avatar_7)
-        val avatar8 = dialogView.findViewById<ImageView>(R.id.avatar_8)
-
-        avatar1.setOnClickListener { 
+        dialogView.findViewById<ImageView>(R.id.avatar_1).setOnClickListener {
             binding.avatarImageView.setImageResource(R.drawable.ic_avatar_1)
             dialog.dismiss()
         }
-        avatar2.setOnClickListener { 
+        dialogView.findViewById<ImageView>(R.id.avatar_2).setOnClickListener {
             binding.avatarImageView.setImageResource(R.drawable.ic_avatar_2)
             dialog.dismiss()
         }
-        avatar3.setOnClickListener { 
+        dialogView.findViewById<ImageView>(R.id.avatar_3).setOnClickListener {
             binding.avatarImageView.setImageResource(R.drawable.ic_avatar_3)
             dialog.dismiss()
         }
-        avatar4.setOnClickListener { 
+        dialogView.findViewById<ImageView>(R.id.avatar_4).setOnClickListener {
             binding.avatarImageView.setImageResource(R.drawable.ic_avatar_4)
             dialog.dismiss()
         }
-        avatar5.setOnClickListener { 
+        dialogView.findViewById<ImageView>(R.id.avatar_5).setOnClickListener {
             binding.avatarImageView.setImageResource(R.drawable.ic_avatar_5)
             dialog.dismiss()
         }
-        avatar6.setOnClickListener { 
+        dialogView.findViewById<ImageView>(R.id.avatar_6).setOnClickListener {
             binding.avatarImageView.setImageResource(R.drawable.ic_avatar_6)
             dialog.dismiss()
         }
-        avatar7.setOnClickListener { 
+        dialogView.findViewById<ImageView>(R.id.avatar_7).setOnClickListener {
             binding.avatarImageView.setImageResource(R.drawable.ic_avatar_7)
             dialog.dismiss()
         }
-        avatar8.setOnClickListener { 
+        dialogView.findViewById<ImageView>(R.id.avatar_8).setOnClickListener {
             binding.avatarImageView.setImageResource(R.drawable.ic_avatar_8)
             dialog.dismiss()
         }
@@ -193,64 +234,51 @@ class RegistrationFragment : Fragment() {
 
         val dialog = builder.create()
 
-        val border1 = dialogView.findViewById<ImageView>(R.id.border_1)
-        val border2 = dialogView.findViewById<ImageView>(R.id.border_2)
-        val border3 = dialogView.findViewById<ImageView>(R.id.border_3)
-        val border4 = dialogView.findViewById<ImageView>(R.id.border_4)
-        val border5 = dialogView.findViewById<ImageView>(R.id.border_5)
-        val border6 = dialogView.findViewById<ImageView>(R.id.border_6)
-        val border7 = dialogView.findViewById<ImageView>(R.id.border_7)
-        val border8 = dialogView.findViewById<ImageView>(R.id.border_8)
-        val border9 = dialogView.findViewById<ImageView>(R.id.border_9)
-        val border10 = dialogView.findViewById<ImageView>(R.id.border_10)
-        val border11 = dialogView.findViewById<ImageView>(R.id.border_11)
-        val border12 = dialogView.findViewById<ImageView>(R.id.border_12)
-
-        border1.setOnClickListener { 
+        dialogView.findViewById<ImageView>(R.id.border_1).setOnClickListener {
             binding.avatarBorderImageView.setImageResource(R.drawable.user_boarder_1)
             dialog.dismiss()
         }
-        border2.setOnClickListener { 
+        dialogView.findViewById<ImageView>(R.id.border_2).setOnClickListener {
             binding.avatarBorderImageView.setImageResource(R.drawable.user_boarder_2)
             dialog.dismiss()
         }
-        border3.setOnClickListener { 
+        dialogView.findViewById<ImageView>(R.id.border_3).setOnClickListener {
             binding.avatarBorderImageView.setImageResource(R.drawable.user_boarder_3)
             dialog.dismiss()
         }
-        border4.setOnClickListener { 
+        dialogView.findViewById<ImageView>(R.id.border_4).setOnClickListener {
             binding.avatarBorderImageView.setImageResource(R.drawable.user_boarder_4)
             dialog.dismiss()
         }
-        border5.setOnClickListener { 
+        dialogView.findViewById<ImageView>(R.id.border_5).setOnClickListener {
             binding.avatarBorderImageView.setImageResource(R.drawable.user_boarder_5)
             dialog.dismiss()
         }
-        border6.setOnClickListener { 
+        dialogView.findViewById<ImageView>(R.id.border_6).setOnClickListener {
             binding.avatarBorderImageView.setImageResource(R.drawable.user_boarder_6)
             dialog.dismiss()
         }
-        border7.setOnClickListener { 
+        dialogView.findViewById<ImageView>(R.id.border_7).setOnClickListener {
             binding.avatarBorderImageView.setImageResource(R.drawable.user_boarder_7)
             dialog.dismiss()
         }
-        border8.setOnClickListener { 
+        dialogView.findViewById<ImageView>(R.id.border_8).setOnClickListener {
             binding.avatarBorderImageView.setImageResource(R.drawable.user_boarder_8)
             dialog.dismiss()
         }
-        border9.setOnClickListener { 
+        dialogView.findViewById<ImageView>(R.id.border_9).setOnClickListener {
             binding.avatarBorderImageView.setImageResource(R.drawable.user_boarder_9)
             dialog.dismiss()
         }
-        border10.setOnClickListener { 
+        dialogView.findViewById<ImageView>(R.id.border_10).setOnClickListener {
             binding.avatarBorderImageView.setImageResource(R.drawable.user_boarder_10)
             dialog.dismiss()
         }
-        border11.setOnClickListener { 
+        dialogView.findViewById<ImageView>(R.id.border_11).setOnClickListener {
             binding.avatarBorderImageView.setImageResource(R.drawable.user_boarder_11)
             dialog.dismiss()
         }
-        border12.setOnClickListener { 
+        dialogView.findViewById<ImageView>(R.id.border_12).setOnClickListener {
             binding.avatarBorderImageView.setImageResource(R.drawable.user_boarder_12)
             dialog.dismiss()
         }
